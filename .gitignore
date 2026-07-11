@@ -1,2 +1,6 @@
 # macOS
 .DS_Store
+
+# Student-rendered exercise output (created locally when students render the .qmd)
+exercise_Week*_Class*.pdf
+!exercise_Week*_Class*_key.pdf
