@@ -1,0 +1,624 @@
+---
+title: "Week 5 · Class 1: Practice Exercises"
+subtitle: "Modern Causal Inference & Linear Regression"
+date: "2026"
+format:
+  pdf:
+    toc: false
+    number-sections: true
+    colorlinks: true
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+library(knitr)
+library(formatR)
+# When running chunks interactively, set the working directory to this file's
+# folder so the relative data/ paths resolve. (During render, knitr already
+# uses the document's directory, so this is skipped.)
+if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+  .doc_path <- rstudioapi::getSourceEditorContext()$path
+  if (length(.doc_path) == 1 && nzchar(.doc_path)) setwd(dirname(.doc_path))
+}
+opts_chunk$set(tidy.opts = list(width.cutoff = 60), tidy = FALSE)
+```
+
+# Segment A — Modern Causal Inference
+
+# Non-AI Exercises
+
+## 1. Fundamental Problem of Causal Inference
+
+### 1.1 Multiple Choice: Counterfactuals
+
+What is the fundamental problem of causal inference?
+
+a) We can't measure outcomes accurately
+b) We can't observe the same unit under both treatment and control conditions
+c) Random assignment is difficult
+d) Statistical software has limitations
+
+Answer: _____
+
+### 1.2 Fill in the Blanks: Potential Outcomes
+
+In potential outcomes notation:
+
+1. Y(1) represents the outcome when _____
+2. Y(0) represents the outcome when _____
+3. The individual causal effect is _____
+4. We can only observe _____ of these for each person
+5. The unobserved outcome is called a _____
+
+Word bank: treated, not treated, Y(1) - Y(0), one, counterfactual
+
+### 1.3 True or False: Causal Inference
+
+Mark each statement as True (T) or False (F):
+
+_____ We can directly observe individual causal effects
+_____ Random assignment helps create comparable groups
+_____ The ATE is the average of individual treatment effects
+_____ Counterfactuals are hypothetical unobserved outcomes
+_____ Causal inference requires observing all potential outcomes
+
+## 2. Average Treatment Effects
+
+### 2.1 Code Detective: ATE Calculation
+
+What does this code calculate?
+
+```r
+treatment_group %>%
+  summarise(mean_outcome = mean(outcome)) -> treated_mean
+
+control_group %>%
+  summarise(mean_outcome = mean(outcome)) -> control_mean
+
+ate <- treated_mean$mean_outcome - control_mean$mean_outcome
+```
+
+This calculates: _____
+
+### 2.2 Match: ATE Components
+
+Match each component with its meaning:
+
+**Components:**
+a) E[Y(1)]
+b) E[Y(0)]
+c) E[Y(1) - Y(0)]
+d) E[Y|T=1] - E[Y|T=0]
+
+**Meanings:**
+1. Average treatment effect
+2. Expected outcome under treatment
+3. Expected outcome under control
+4. Observed difference in means
+
+Matches: a = _____, b = _____, c = _____, d = _____
+
+### 2.3 Multiple Choice: Random Assignment
+
+Why does random assignment help identify causal effects?
+
+a) It makes the sample larger
+b) It ensures treatment and control groups are similar on average
+c) It eliminates all confounders perfectly
+d) It makes people more honest
+
+Answer: _____
+
+## 3. Difference-in-Differences
+
+### 3.1 Fill in the Blanks: DiD Logic
+
+Difference-in-differences compares:
+
+1. Changes over time in the _____ group
+2. Changes over time in the _____ group
+3. The difference between these changes estimates the _____
+4. DiD assumes _____ trends without treatment
+5. We need at least _____ time periods
+
+Word bank: treatment, control, causal effect, parallel, two
+
+### 3.2  True or False: DiD Assumptions
+
+Mark each statement as True (T) or False (F):
+
+_____ DiD requires random assignment of treatment
+_____ Parallel trends assumption means groups move together pre-treatment
+_____ DiD can work with observational data
+_____ We need panel data for DiD
+_____ DiD eliminates all time-invariant confounders
+
+## 4. Validity
+
+### 4.1 Match: Validity Types
+
+Match each validity type with its concern:
+
+**Types:**
+a) Internal validity
+b) External validity
+c) Construct validity
+d) Statistical validity
+
+**Concerns:**
+1. Whether results generalize to other contexts
+2. Whether we can attribute effects to treatment
+3. Whether we're measuring what we think
+4. Whether statistical tests are appropriate
+
+Matches: a = _____, b = _____, c = _____, d = _____
+
+### 4.2 Multiple Choice: Threats
+
+Which threatens internal validity?
+
+a) Small sample size
+b) Selection bias
+c) Limited geographic scope
+d) Measurement error
+
+Answer: _____
+
+### 4.3 Spot the Error: Causal Claims
+
+What's wrong with this conclusion?
+
+"States that adopted the policy saw crime decrease, so the policy reduced crime."
+
+Problem: _____
+
+# AI Exercises
+
+**Tips for Working with Claude:**
+
+- Ask for **R code using only tidyverse** (no other packages)
+- Request **simple, focused answers** to your specific question—not complex analyses
+- Ask Claude to **explain what the code is doing** since you're learning
+- Avoid asking for visualizations or plots in these exercises
+- Include the output of `glimpse()` in your prompt so Claude knows your variable names
+
+**Example prompt:** "Using tidyverse in R, calculate the average treatment effect (ATE) by comparing mean post_earnings_12m between treated and control groups. Keep the code simple and explain what each line does. Here is what my data looks like: [paste glimpse output]"
+
+For each dataset below, work with Claude to:
+- Calculate the Average Treatment Effect (ATE)
+- Test for statistical significance
+- Interpret the magnitude and meaning of the ATE in context
+
+## 5. Job Training Program RCT
+
+**Dataset: data/job_training_rct.csv**
+
+**Description**: Randomized controlled trial of a job training program with 1,200 participants.
+
+**Variables**:
+
+- `participant_id`: Unique identifier (int)
+- `age`: Age in years (int)
+- `gender`: Gender (chr)
+- `education`: Education level 1-5 (int)
+- `prior_earnings`: Annual earnings before program (dbl)
+- `treated`: Treatment assignment 1=treated, 0=control (int)
+- `takeup`: Actually participated if treated (int)
+- `post_earnings_6m`: Earnings 6 months after (dbl)
+- `post_earnings_12m`: Earnings 12 months after (dbl)
+- `employment_12m`: Employed at 12 months 1=yes (int)
+- `center_id`: Training center ID (int)
+
+```{r}
+# Load the data
+job_data <- read_csv("data/job_training_rct.csv")
+
+# Calculate ATE for earnings at 12 months
+
+# Calculate ATE for employment at 12 months
+```
+
+Interpret: What do these ATEs mean in practical terms?
+
+## 6. Get Out The Vote Experiment
+
+**Dataset: data/gotv_experiment.csv**
+
+**Description**: Field experiment testing different voter mobilization methods with 5,000 registered voters.
+
+**Variables**:
+
+- `voter_id`: Unique identifier (int)
+- `treatment`: Treatment group - "Control", "Phone Call", "Canvassing", "Mailer" (chr)
+- `age_group`: Age category (chr)
+- `education`: Education level (chr)
+- `voted_2022`: Whether voted in 2022 election 1=yes (int)
+
+```{r}
+# Load the data
+gotv_data <- read_csv("data/gotv_experiment.csv")
+
+glimpse(gotv_data)
+
+# Calculate ATE for each treatment compared to control
+
+```
+
+Interpret: Which intervention is most effective? Is it cost-effective?
+
+## 7. Media Advertising Experiment
+
+**Dataset: data/media_experiment_full.csv**
+
+**Description**: Experiment on political advertising effects with 1,400 participants tracked over time.
+
+**Variables**:
+
+- `viewer_id`: Unique identifier (int)
+- `day`: Day of observation (int)
+- `battleground_state`: In battleground state 1=yes (int)
+- `minutes_tv_news`: Minutes of TV news watched (int)
+- `total_ads_seen`: Total political ads seen (int)
+- `voting_intent`: Voting intention 0-100 scale (dbl)
+- `ads_candidate_A`: Number of ads for candidate A (int)
+- `ads_candidate_B`: Number of ads for candidate B (int)
+
+```{r}
+# Load the data
+media_data <- read_csv("data/media_experiment_full.csv")
+
+# Calculate ATE of seeing more ads for candidate A vs B on voting intent
+
+```
+
+Interpret: How much do political ads move voter preferences?
+
+## 8. Online Course Completion
+
+**Dataset: data/mooc_progress.csv**
+
+**Description**: Data from 3,000 students in online courses comparing free vs paid subscriptions.
+
+**Variables**:
+
+- `enroll_id`: Enrollment ID (int)
+- `day_of_course`: Day in course (int)
+- `videos_watched`: Number of videos watched (int)
+- `quiz_attempted`: Attempted quiz 1=yes (int)
+- `forum_posts`: Number of forum posts (int)
+- `subscription_type`: "free" or "paid" (chr)
+- `completed_course`: Completed course 1=yes (int)
+
+```{r}
+# Load the data
+mooc_data <- read_csv("data/mooc_progress.csv")
+
+glimpse(mooc_data)
+
+# Calculate ATE of paid subscription on course completion
+
+```
+
+Does paying for a course increase commitment to complete it?
+
+## 9. Refugee Integration Program
+
+**Dataset: data/refugee_integration.csv**
+
+**Description**: Study of 800 refugee families comparing different levels of English language training.
+
+**Variables**:
+
+- `case_id`: Family case ID (int)
+- `arrival_year`: Year arrived (int)
+- `country_origin`: Country of origin (chr)
+- `family_size`: Number of family members (int)
+- `english_class_hours`: Hours of English classes provided (int)
+- `employed_year1`: Family member employed by year 1 (int)
+- `income_year5`: Family income at year 5 (dbl)
+- `citizenship_applied`: Applied for citizenship 1=yes (int)
+
+```{r}
+# Load the data
+refugee_data <- read_csv("data/refugee_integration.csv")
+
+glimpse(refugee_data)
+# Calculate ATE of receiving >100 hours vs ≤100 hours of English training on employment
+
+```
+
+Is intensive English training worth the investment?
+
+# Segment B — Linear Regression
+
+# Non-AI Exercises
+
+## 1. Understanding Linear Relationships
+
+### 1.1 Multiple Choice: Linear Relationships
+
+What defines a linear relationship between X and Y?
+
+a) X and Y move in the same direction
+b) As X increases by one unit, Y changes by a constant amount
+c) The relationship forms a perfect straight line
+d) X causes Y
+
+Answer: _____
+
+### 1.2 True or False: Regression Concepts
+
+Mark each statement as True (T) or False (F):
+
+_____ Linear regression finds the line that minimizes squared errors
+_____ The slope tells us the change in Y for a one-unit change in X
+_____ The intercept is the predicted Y when X equals zero
+_____ R-squared can be negative
+_____ Residuals are the differences between predicted and actual values
+
+### 1.3 Match: Regression Components
+
+Match each component with its symbol:
+
+**Components:**
+
+a) Dependent variable
+b) Independent variable
+c) Slope coefficient
+d) Intercept
+e) Error term
+
+**Symbols:**
+
+1. $\beta$
+2. Y
+3. $\mu$
+4. X
+5. $\alpha$
+
+Matches: a = _____, b = _____, c = _____, d = _____, e = _____
+
+## 2. Interpreting Regression Output
+
+### 2.1 Code Detective: lm() Function
+
+What does this code do?
+
+```r
+model <- lm(vote_share ~ campaign_spending, data = election_data)
+summary(model)
+```
+
+This code: 
+
+### 2.2 Fill in the Blanks: Interpretation
+
+Given a regression equation: Y = 45 + 3.2X
+
+1. The intercept is _____
+2. The slope is _____
+3. When X = 0, Y is predicted to be _____
+4. When X increases by 1, Y increases by _____
+5. When X = 10, Y is predicted to be _____
+
+## 3. Assumptions and Diagnostics
+
+### 3.1 Match: OLS Assumptions
+
+Match each assumption with its meaning (you will need to look each up!):
+
+**Assumptions:**
+
+a) Linearity
+b) Independence
+c) Homoscedasticity
+d) Normality
+
+**Meanings:**
+
+1. Residuals have constant variance
+2. The true relationship is linear
+3. Observations are independent
+4. Residuals are normally distributed
+
+Matches: a = _____, b = _____, c = _____, d = _____
+
+## 4. Model Evaluation
+
+### 4.1 Multiple Choice: RMSE
+
+Root Mean Square Error (RMSE) measures:
+
+a) The average error in predictions
+b) The typical size of prediction errors
+c) The percentage of variance explained
+d) The significance of coefficients
+
+Answer: _____
+
+### 4.2 True or False: Model Quality
+
+Mark each statement as True (T) or False (F):
+
+_____ Lower RMSE indicates better predictions
+_____ Outliers can strongly affect regression results
+_____ The best-fit line always goes through (mean(X), mean(Y))
+
+# AI Exercises
+
+**Tips for Working with Claude:**
+
+- Ask for **R code using only tidyverse** (no other packages)
+- Request **simple, focused answers** to your specific question—not complex analyses
+- Ask Claude to **explain what the code is doing** since you're learning
+- Avoid asking for visualizations or plots in these exercises
+- Include the output of `glimpse()` in your prompt so Claude knows your variable names
+
+**Example prompt:** "Using tidyverse in R, run a simple linear regression with lm() predicting approval from unemployment. Then show me how to use the coefficients to predict approval when unemployment is 8%. Keep the code simple and explain what each line does. Here is what my data looks like: [paste glimpse output]"
+
+For each AI exercise:
+- Work with Claude to analyze the data
+- Record your prompts and key findings
+
+## 5. Political Approval and Economy
+
+**Dataset: data/approval_economy.csv**
+
+**Description**: Presidential approval ratings and economic indicators.
+
+**Variables**:
+
+- `month`: Month of observation (date)
+- `approval`: Presidential approval percentage (dbl)
+- `unemployment`: Unemployment rate (dbl)
+- `gdp_growth`: GDP growth rate (dbl)
+- `inflation`: Inflation rate (dbl)
+- `gas_prices`: Average gas price (dbl)
+- `consumer_confidence`: Consumer confidence index (dbl)
+- `party`: President's party (chr)
+- `major_event`: Major event that month (chr)
+
+### 5.1 Initial Regression Analysis
+
+```{r}
+# Load the dataset
+approval_data <- read_csv("data/approval_economy.csv")
+
+# Examine the structure
+glimpse(approval_data)
+```
+
+### 5.2 Work with Claude to run a simple regression of approval on unemployment.
+
+```{r}
+
+```
+
+### 5.3 Use your regression model to predict presidential approval when unemployment is 8%.
+
+```{r}
+
+```
+
+## 6. Campaign Finance Effects
+
+**Dataset: data/campaign_regression.csv**
+
+**Description**: Congressional election results with spending data.
+
+**Variables**:
+
+- `district`: Congressional district ID (chr)
+- `incumbent_vote`: Incumbent vote share percentage (dbl)
+- `incumbent_spend`: Incumbent spending in millions (dbl)
+- `challenger_spend`: Challenger spending in millions (dbl)
+- `total_spend`: Total spending in race (dbl)
+- `incumbent_party`: Party of incumbent (chr)
+- `presidential_margin`: Presidential vote margin in district (dbl)
+- `incumbent_tenure`: Years in office (int)
+- `primary_challenge`: Had primary challenger (lgl)
+
+### 6.1 Money and Votes
+
+```{r}
+# Load the dataset
+campaign_data <- read_csv("data/campaign_regression.csv")
+
+# Check the structure
+glimpse(campaign_data)
+```
+
+### 6.2 Use Claude to run a simple regression of incumbent vote share on incumbent spending.
+
+```{r}
+
+```
+
+### 6.3 Use your regression model to predict incumbent vote share when the incumbent spends $7 million.
+
+```{r}
+
+```
+
+## 7. Education and Political Knowledge
+
+**Dataset: data/education_knowledge.csv**
+
+**Description**: Survey data on education and political knowledge.
+
+**Variables**:
+
+- `respondent_id`: Unique identifier (int)
+- `years_education`: Years of formal education (int)
+- `political_knowledge`: Score on political knowledge test, 0-100 (dbl)
+- `age`: Age in years (int)
+- `income`: Annual income in thousands (dbl)
+- `news_consumption`: Hours of news per week (dbl)
+- `college_major`: Field of study if college graduate (chr)
+- `parents_education`: Average years of parents' education (dbl)
+- `books_at_home`: Number of books growing up (int)
+
+### 7.1 Education Effects
+
+```{r}
+# Load the dataset
+education_data <- read_csv("data/education_knowledge.csv")
+
+# Explore the data
+glimpse(education_data)
+```
+
+### 7.2 Work with Claude to estimate the relationship between education and political knowledge.
+
+```{r}
+
+```
+
+### 7.3 Use your regression model to predict political knowledge for someone with 16 years of education (college degree).
+
+```{r}
+
+```
+
+## 8. Media Bias and Perception
+
+**Dataset: data/media_perception.csv**
+
+**Description**: Data on media consumption and political perceptions.
+
+**Variables**:
+
+- `respondent_id`: Unique identifier (int)
+- `fox_hours`: Weekly hours watching Fox News (dbl)
+- `msnbc_hours`: Weekly hours watching MSNBC (dbl)
+- `newspaper_freq`: Days per week reading newspaper (int)
+- `social_media_news`: Hours on social media for news (dbl)
+- `perceived_bias`: Perceived media bias, -10 (left) to 10 (right) (dbl)
+- `actual_knowledge`: Political knowledge score (dbl)
+- `confidence`: Confidence in political knowledge, 0-100 (dbl)
+- `party_id`: Party identification (chr)
+
+### 8.1 Media Diet Analysis
+
+```{r}
+# Load the dataset
+media_data <- read_csv("data/media_perception.csv")
+
+# Look at the structure
+glimpse(media_data)
+```
+
+### 8.2 Use Claude to run a simple regression of perceived bias on Fox News hours watched.
+
+```{r}
+
+```
+
+### 8.3 Use your regression model to predict perceived bias for someone who watches 10 hours of Fox News per week.
+
+```{r}
+
+```
+
+\newpage
