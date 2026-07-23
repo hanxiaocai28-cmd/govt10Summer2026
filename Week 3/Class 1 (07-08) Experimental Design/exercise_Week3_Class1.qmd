@@ -39,7 +39,7 @@ b) Whether the treatment actually caused the observed effect
 c) How large the treatment effect is  
 d) Whether the experiment was conducted ethically
 
-Answer: _____
+Answer: __B___
 
 ### 1.2 Fill-in-the-Blank: Types of Experiments
 
@@ -53,7 +53,7 @@ c) A __________ experiment asks participants to choose between profiles with ran
 
 d) A __________ experiment takes place in real-world settings with policy interventions.
 
-Answer: a) _____ b) _____ c) _____ d) _____
+Answer: a) __factorial___ b) ___vignette__ c) __cojoint___ d) __field___
 
 ### 1.3  Matching: Experimental Concepts
 
@@ -73,7 +73,7 @@ b) Question verifying participants understood the treatment
 c) Assumption that one person's treatment doesn't affect another's outcome  
 d) Participants dropping out of the study  
 
-Answer: 1-___ 2-___ 3-___ 4-___
+Answer: 1-__a_ 2-__c_ 3- b 4-__d_
 
 ### 1.4 Matching: Implementation Threats
 
@@ -93,7 +93,7 @@ b) Comparing outcomes by assigned condition, regardless of whether participants 
 c) Participants guessing the hypothesis and adjusting their answers accordingly
 d) Dropout rates differing between treatment and control, breaking comparability
 
-Answer: 1-___ 2-___ 3-___ 4-___
+Answer: 1-__c_ 2-__a_ 3-__b_ 4-__d_
 
 ### 1.5 True/False: Pre-Analysis Plans
 
@@ -104,7 +104,7 @@ b) PAPs help prevent p-hacking and selective reporting ___
 c) You cannot deviate from a PAP under any circumstances ___
 d) PAPs make null results more publishable ___
 
-Answer: a) ___ b) ___ c) ___ d) ___
+Answer: a) f b) t c) f d) t
 
 ## 2. Designing a Study: What to Vary and What to Measure
 
@@ -118,13 +118,13 @@ b) Gerber, Green, and Larimer mailed voters messages with increasing social pres
 
 c) Butler and Broockman emailed state legislators from a putatively Black or White constituent asking for help registering to vote, and recorded who replied.
 
-Answer: a) X: _____ Y: _____  b) X: _____ Y: _____  c) X: _____ Y: _____
+Answer: a) X: __the story told___ Y: _ the respondent's decision to strike or not____  b) X: __voters mesages___ Y: __voter turnout___  c) X: __email___ Y: ___replied or not__
 
 ### 2.2 The Bundle Problem
 
 A student designs an experiment where the treatment ad uses ominous music, dark imagery, and an attack script, while the control ad uses upbeat music, bright imagery, and a positive script. The treatment ad lowers candidate support. Why can't the student conclude that "negative content" caused the drop, and what should they change?
 
-Answer: ________________________________________
+Answer: Both variables have conflicting effects on each other; They should instead give each variable to separate respondents
 
 ### 2.3 Choosing a Control
 
@@ -135,7 +135,7 @@ b) A mailer of the same length and format about an unrelated civic topic (a plac
 c) A phone call instead of a mailer
 d) The same mailer one week later
 
-Answer: _____
+Answer: ___B__
 
 ### 2.4 Behavioral vs. Attitudinal Outcomes
 
@@ -146,7 +146,7 @@ b) Whether the participant clicked a link to donate ___
 c) Whether a registered voter actually turned out, from the voter file ___
 d) Agreement with the statement "immigration helps the economy" ___
 
-Answer: a) ___ b) ___ c) ___ d) ___
+Answer: a) A b) B c) B d) A
 
 ## 3. Implementation Threats
 
@@ -158,13 +158,20 @@ a) What is the intent-to-treat (ITT) effect?
 b) Will the treatment-on-treated effect (the effect among those actually canvassed) be larger or smaller than the ITT? Why?
 c) Which should the researcher report as the headline, and why?
 
-Answer: ________________________________________
+Answer: 
+1. ITT = 40% − 34% = 6%
+2. Larger. The ITT spreads the effect across everyone assigned, including
+the 400 never reached; concentrating the same total effect among the ~600
+compliers gives a bigger per-person effec
+3. The ITT results because it answers the question much more directly
+
+
 
 ### 3.2 Differential Attrition
 
 An experiment's treatment is a long, upsetting video; the control is a short, pleasant one. More people quit the survey in the treatment group. Why is this differential attrition more dangerous than dropout that affects both groups equally?
 
-Answer: ________________________________________
+Answer: The results are essentially null because the samples from the treatment group are significantly smaller than then control group
 
 ### 3.3 Manipulation-Check Placement
 
@@ -175,7 +182,7 @@ b) After the outcome question, so it does not re-prime the treatment or signal t
 c) It does not matter where it goes
 d) It should replace the outcome question
 
-Answer: _____
+Answer: __B___
 
 ### 3.4 Statistical Power
 
@@ -186,7 +193,7 @@ b) When they do reach statistical significance, the estimated effect tends to be
 c) A significant result from a small study is more trustworthy than one from a large study
 d) Power depends only on sample size, not on the effect size or the noise in the outcome
 
-Answer: _____
+Answer: ___B__
 
 # AI Exercises
 
@@ -230,13 +237,25 @@ glimpse(job_training)
 a. **Group Means**: Use Claude to compute the mean 12-month earnings (`post_earnings_12m`) for the treatment group and, separately, for the control group. Just report each group's average --- you don't need to combine them into a single number.
 
 ```{r}
-
+group_means <- job_training %>%
+group_by(treated) %>%
+summarize(
+n = n(),
+mean_earnings_12m = mean(post_earnings_12m),
+sd_earnings_12m = sd(post_earnings_12m)
+)
+print(group_means)
 ```
 
 b. **Compliance Analysis**: Ask Claude to help you examine the difference between treatment assignment (`treated`) and actual participation (`takeup`). What does this tell us about the experiment?
 
 ```{r}
-
+compliance_table <- job_training %>%
+group_by(treated, takeup) %>%
+summarize(n = n(), .groups = "drop") %>%
+pivot_wider(names_from = takeup, values_from = n, values_fill = 0) %>%
+rename(No_Takeup = `0`, Takeup = `1`)
+print(compliance_table)
 ```
 
 ## 2. Civic Crowdfunding Experiment
@@ -268,13 +287,30 @@ a. **Success Rate Analysis**: Work with Claude to calculate what percentage of p
 An **indicator variable** (also called a dummy variable) is coded `1` when a condition is true and `0` when it is false --- here, `1` if a project reached its goal and `0` if it did not. Because R treats `1`/`0` (and `TRUE`/`FALSE`) as numbers, `sum()` of an indicator counts the cases coded 1 and `mean()` of an indicator gives the proportion coded 1 (here, the success rate).
 
 ```{r}
-
+civic_crowd <- civic_crowd %>%
+mutate(success = if_else(raised_amount >= goal_amount, 1, 0))
+# Calculate success rates by treatment
+success_rates <- civic_crowd %>%
+group_by(gov_match) %>%
+summarize(
+n_projects = n(),
+n_successful = sum(success),
+success_rate = mean(success)
+)
+print(success_rates)
 ```
 
 b. **Heterogeneous Effects**: Ask Claude to help you test whether the government matching effect varies by project category. Which types of projects benefit most from matching?
 
 ```{r}
-
+category_effects <- civic_crowd %>%
+group_by(category, gov_match) %>%
+summarize(success_rate = mean(success), .groups = "drop") %>%
+pivot_wider(names_from = gov_match, values_from = success_rate,
+names_prefix = "match_") %>%
+mutate(treatment_effect = match_1 - match_0) %>%
+arrange(desc(treatment_effect))
+print(category_effects)
 ```
 
 ## 3. Refugee Integration Study
@@ -304,13 +340,42 @@ glimpse(refugee_data)
 a. **Language Training Effect**: Use Claude to analyze whether English class hours predict employment in the first year. What's the relationship between language training and employment outcomes?
 
 ```{r}
-
+refugee_data <- refugee_data %>%
+mutate(
+training_level = case_when(
+english_class_hours == 0 ~ "None",
+english_class_hours < 150 ~ "Low",
+english_class_hours < 300 ~ "Medium",
+TRUE ~ "High"
+),
+training_level = factor(training_level,
+levels = c("None", "Low", "Medium", "High"))
+)
+# Employment rates by training level
+employment_by_training <- refugee_data %>%
+group_by(training_level) %>%
+summarize(
+n = n(),
+employment_rate = mean(employed_year1),
+.groups = "drop"
+)
+print(employment_by_training)
 ```
 
 b. **Long-term Outcomes**: Ask Claude to help you examine how arrival year affects long-term integration (5-year income and citizenship applications). Are there cohort effects?
 
 ```{r}
-
+cohort_outcomes <- refugee_data %>%
+group_by(arrival_year) %>%
+summarize(
+n = n(),
+pct_employed_year1 = mean(employed_year1) * 100,
+mean_income_year5 = mean(income_year5, na.rm = TRUE),
+n_with_income = sum(!is.na(income_year5)),
+pct_citizenship = mean(citizenship_applied) * 100,
+.groups = "drop"
+)
+print(cohort_outcomes)
 ```
 
 ## 4. Climate Anxiety Panel Study
@@ -339,13 +404,36 @@ glimpse(climate_data)
 a. **Ideology and Anxiety**: Work with Claude to examine how political ideology relates to climate anxiety levels. Calculate mean anxiety by ideology group.
 
 ```{r}
-
+climate_data <- climate_data %>%
+mutate(
+ideology_label = factor(political_ideology,
+levels = 1:5,
+labels = c("Very Liberal", "Liberal", "Moderate",
+"Conservative", "Very Conservative"))
+)
+# Mean anxiety by ideology
+anxiety_by_ideology <- climate_data %>%
+group_by(ideology_label) %>%
+summarize(
+n = n(),
+mean_anxiety = mean(climate_anxiety_scale),
+sd_anxiety = sd(climate_anxiety_scale),
+.groups = "drop"
+)
+print(anxiety_by_ideology)
 ```
 
 b. **Panel Analysis**: Ask Claude to help you analyze how climate anxiety changes over time (across waves) and whether this varies by news consumption frequency.
 
 ```{r}
-
+anxiety_by_wave <- climate_data %>%
+group_by(wave) %>%
+summarize(
+n = n(),
+mean_anxiety = mean(climate_anxiety_scale),
+.groups = "drop"
+)
+print(anxiety_by_wave)
 ```
 
 \newpage

@@ -67,7 +67,7 @@ b) Creates new columns or modifies existing ones
 c) Filters rows based on conditions
 d) Sorts data by a variable
 
-Answer: _____
+Answer: __b___
 
 ### 1.2 Code Detective: Basic mutate()
 
@@ -81,18 +81,18 @@ data %>%
   )
 ```
 
-Line 3 creates: _____
-Line 4 creates: _____
+Line 3 creates: a column called "vote_margin" that takes the difference between the number of democrat votes and republican votes
+Line 4 creates: a column that displays the winning party by determining if the value of the previous value is positive or not
 
 ### 1.3 Fill in the Blanks: Variable Types
 
 When creating new variables, we often need to:
 
-1. Calculate _____ between existing variables
-2. _____ text variables into categories
-3. Create _____ (TRUE/FALSE) indicators
-4. Convert between _____ types
-5. Handle _____ values appropriately
+1. Calculate differences between existing variables
+2. Recode text variables into categories
+3. Create logical (TRUE/FALSE) indicators
+4. Convert between data types
+5. Handle missing values appropriately
 
 Word bank: differences, recode, logical, data, missing
 
@@ -112,7 +112,7 @@ b) case_when()
 3. Simple yes/no binary coding
 4. Complex multi-condition logic
 
-Matches: a = _____ and _____, b = _____ and _____
+Matches: a = __1___ and ___3__, b = __2___ and __4___
 
 ### 2.2 Code Detective: case_when()
 
@@ -130,9 +130,9 @@ data %>%
   )
 ```
 
-For someone age 25: _____
-For someone age 45: _____
-For someone age 70: _____
+For someone age 25: Young
+For someone age 45: Middle
+For someone age 70: Senior
 
 ### 2.3 Spot the Error
 
@@ -149,7 +149,7 @@ mutate(
 )
 ```
 
-Problem: _____
+Problem: Line 146 is not going to produce any value and therefore redundent
 
 ## 3. Working with Proportions
 
@@ -162,17 +162,17 @@ b) Count Democrats and divide by total observations
 c) Count total and divide by Democrats
 d) Use mean() on a logical variable
 
-Answer: _____
+Answer: __B___
 
 ### 3.2 True or False: summarise()
 
 Mark each statement as True (T) or False (F):
 
-_____ summarise() reduces multiple rows to a single summary row
-_____ You can calculate multiple statistics in one summarise() call
-_____ summarise() automatically groups by all variables
-_____ n() counts the number of rows in each group
-_____ summarise() can only calculate numeric summaries
+___T__ summarise() reduces multiple rows to a single summary row
+___T__ You can calculate multiple statistics in one summarise() call
+___T__ summarise() automatically groups by all variables
+___T__ n() counts the number of rows in each group
+___F__ summarise() can only calculate numeric summaries
 
 ### 3.3 Fill in the Code
 
@@ -181,9 +181,9 @@ Complete this code to calculate turnout rate:
 ```r
 data %>%
   summarise(
-    total_voters = _____,
-    total_voted = sum(_____ == "Yes"),
-    turnout_rate = _____ / _____
+    total_voters = n(),
+    total_voted = sum(voted == "Yes"),
+    turnout_rate = toal_voted / total_voters
   )
 ```
 
@@ -207,7 +207,7 @@ e) lag()
 4. Make negative values positive
 5. Get previous row's value
 
-Matches: a = _____, b = _____, c = _____, d = _____, e = _____
+Matches: a = __1__, b = __2_, c = __3___, d = ___4__, e = __5___
 
 ### 4.2 Code Detective: Complex Transformation
 
@@ -223,7 +223,7 @@ data %>%
   )
 ```
 
-This code calculates: _____
+This code calculates: For each state, it calculates the average income, then for each person it calculates how their income differs from their state’s average, and creates a logical variable indicating if they earn above their state’s average
 
 # AI Exercises
 
@@ -277,7 +277,20 @@ Ask Claude to help you create:
 - A "seniority" category based on years of service (>20 is senior)
 
 ```{r}
+legislators <- legislators %>%
+mutate(
+ideology_category = case_when(
+ideology_score < quantile(ideology_score, 1/3, na.rm = TRUE) ~ "left",
+ideology_score < quantile(ideology_score, 2/3, na.rm = TRUE) ~ "center",
+TRUE ~ "right"
+),
+effectiveness = if_else(bills_sponsored > 4 & committee_count > 0,
+"effective", "not effective"),
+seniority = if_else(years_service > 20, "senior", "junior")
+)
 
+legislators %>%
+count(ideology_category)
 ```
 
 ### 5.3 Calculating Party Metrics
@@ -285,7 +298,21 @@ Ask Claude to help you create:
 Work with Claude to calculate party-level statistics for the variables you created in the last step.  For each party, what percent of legislators are in each category you created.
 
 ```{r}
-
+party_stats <- legislators %>%
+group_by(party) %>%
+summarise(
+# Ideology distribution
+pct_left = mean(ideology_category == "left", na.rm = TRUE) * 100,
+pct_center = mean(ideology_category == "center", na.rm = TRUE) * 100,
+pct_right = mean(ideology_category == "right", na.rm = TRUE) * 100,
+# Effectiveness
+pct_effective = mean(effectiveness == "effective", na.rm = TRUE) * 100,
+# Seniority
+pct_senior = mean(seniority == "senior", na.rm = TRUE) * 100,
+n = n()
+) %>%
+mutate(across(where(is.numeric) & !n, ~round(., 1)))
+party_stats
 ```
 
 ## 6. Education and Political Participation
@@ -322,7 +349,26 @@ Work with Claude to:
 - Create a variable called `activist` that is TRUE if the person donated more than the median, volunteered more than the median and voted in 2020.
 
 ```{r}
-
+median_donations <- median(civic$donations, na.rm = TRUE)
+median_volunteer <- median(civic$volunteer_hours, na.rm = TRUE)
+# Create new variables
+civic <- civic %>%
+mutate(
+# Recode education into binary
+education_binary = if_else(
+education %in% c("High School", "Some College", "Bachelor", "Graduate"),
+"High School +",
+"Less than High School"
+),
+# Create activist variable
+# TRUE if donated > median AND volunteered > median AND voted in 2020
+activist = (donations > median_donations) &
+(volunteer_hours > median_volunteer) &
+(voted_2020 == "Yes")
+)
+# Check the results
+civic %>%
+count(education_binary)
 ```
 
 ## 7. Campaign Finance Transformations
@@ -361,6 +407,43 @@ Ask Claude to help you:
 - Create variables for in-state vs out-of-state contributions (assume that your state is New York)
 
 ```{r}
+# Calculate mean for threshold
+mean_amount <- mean(finance$amount, na.rm = TRUE)
+# Create donor categories
+finance <- finance %>%
+mutate(
+# Donor size categories based on mean
+donor_size = if_else(
+amount < mean_amount,
+"small_donor",
+"major_donor"
+),
+# In-state vs out-of-state (assuming we're in New York)
+contribution_source = if_else(
+state == "NY",
+"in_state",
+"out_of_state"
+)
+)
+# Summarize results
+finance %>%
+count(donor_size) %>%
+mutate(pct = n / sum(n) * 100)
+
+finance %>%
+count(contribution_source) %>%
+mutate(pct = n / sum(n) * 100)
+
+# Analyze by party
+finance %>%
+group_by(party, donor_size) %>%
+summarise(
+total_raised = sum(amount, na.rm = TRUE),
+avg_contribution = mean(amount, na.rm = TRUE),
+n_contributions = n(),
+.groups = "drop"
+)
+
 
 ```
 
@@ -372,7 +455,28 @@ Work with Claude to summarize the data.
 - How much was contributed over time
 
 ```{r}
-
+# Convert date and create time variables
+finance <- finance %>%
+mutate(
+date = as.Date(date),
+month = month(date, label = TRUE),
+month_num = month(date),
+# Create campaign period categories
+campaign_period = case_when(
+month_num <= 3 ~ "early",
+month_num <= 7 ~ "middle",
+TRUE ~ "late"
+)
+)
+# When was the most money given?
+finance %>%
+group_by(campaign_period) %>%
+summarise(
+total = sum(amount, na.rm = TRUE),
+avg = mean(amount, na.rm = TRUE),
+n = n()
+) %>%
+arrange(desc(total))
 ```
 
 ## 8. Demographic Transformations
@@ -410,7 +514,29 @@ Work with Claude to:
 - Create a variable that captures the quartiles of unemployment 
 
 ```{r}
-
+# Calculate median population for urban/rural classification
+median_pop <- median(census$population, na.rm = TRUE)
+# Create classifications
+census <- census %>%
+mutate(
+# Urban/rural classification based on population (proxy for density)
+urban_rural = if_else(
+population > median_pop,
+"urban",
+"rural"
+),
+# Unemployment quartiles
+unemployment_quartile = case_when(
+unemployment_rate <= quantile(unemployment_rate, 0.25, na.rm = TRUE) ~ "Q1 (lowest)",
+unemployment_rate <= quantile(unemployment_rate, 0.50, na.rm = TRUE) ~ "Q2",
+unemployment_rate <= quantile(unemployment_rate, 0.75, na.rm = TRUE) ~ "Q3",
+TRUE ~ "Q4 (highest)"
+)
+)
+# Check distributions
+census %>%
+count(urban_rural) %>%
+mutate(pct = n / sum(n) * 100)
 ```
 
 # Segment B — Causality
@@ -433,7 +559,7 @@ c) No confounding
 2. No third variable explains both X and Y
 3. X and Y must be statistically related
 
-Matches: a = _____, b = _____, c = _____
+Matches: a = __3___, b = __1___, c = __2___
 
 ### 1.2 Multiple Choice: Ice Cream and Crime
 
@@ -444,17 +570,17 @@ b) Crime happens before ice cream sales
 c) Temperature affects both ice cream sales and crime
 d) The correlation is too weak
 
-Answer: _____
+Answer: ___c__
 
 ### 1.3 True or False: Causation
 
 Mark each statement as True (T) or False (F):
 
-_____ Correlation always implies causation
-_____ Causation requires temporal ordering
-_____ Large correlations are more likely to be causal
-_____ Randomized experiments help establish causation
-_____ Observational data can never show causation
+__F___ Correlation always implies causation
+__T___ Causation requires temporal ordering
+__F___ Large correlations are more likely to be causal
+__T___ Randomized experiments help establish causation
+__F___ Observational data can never show causation
 
 ### 1.4 Multiple Choice: What Correlation Alone Can Tell Us
 
@@ -465,7 +591,7 @@ b) Predict turnout — knowing a county's coffee-shop density helps us anticipat
 c) Recommend coffee shops as a get-out-the-vote strategy
 d) Rule out any confounding variables
 
-Answer: _____
+Answer: __B___
 
 ## 2. Identifying Confounders
 
@@ -473,11 +599,11 @@ Answer: _____
 
 A confounding variable:
 
-1. Affects both the _____ and the _____
-2. Creates a _____ relationship between X and Y
-3. Must occur _____ to both X and Y
-4. Can be controlled through _____ assignment
-5. Makes causal inference _____
+1. Affects both the __cause___ and the __effect___
+2. Creates a __spurious___ relationship between X and Y
+3. Must occur __prior___ to both X and Y
+4. Can be controlled through __random___ assignment
+5. Makes causal inference _difficult____
 
 Word bank: treatment, outcome, spurious, prior, random, difficult
 
@@ -497,7 +623,7 @@ d) Married people are happier
 3. Parents' education and income
 4. Selection into marriage
 
-Matches: a = _____, b = _____, c = _____, d = _____
+Matches: a = __2___, b = __3___, c = __1___, d = __d___
 
 ## 3. Temporal Ordering
 
@@ -510,7 +636,7 @@ b) Rain causes wet streets
 c) High crime causes more police hiring last year
 d) Tall children have tall parents
 
-Answer: _____
+Answer: __d___
 
 ### 3.2 Spot the Error: Causal Claims
 
@@ -518,7 +644,7 @@ What's wrong with this causal claim?
 
 "States with stricter gun laws have more gun violence, so gun laws cause violence."
 
-Problem: _____
+Problem: __ Maybe strict gun laws are in response to existing already high violence, temporal order issue___
 
 ### 3.3 Spot the Error: Post Hoc Reasoning
 
@@ -526,7 +652,7 @@ A mayor argues: "We adopted a new policing policy in 2021, and crime fell every 
 
 What reasoning error is this, and why does the timing alone not prove the policy worked?
 
-Problem: _____
+Problem: __post hoc, ergo propter hoc fallacy___
 
 ## 4. Alternative Explanations
 
@@ -539,17 +665,17 @@ b) Causal - divorce causes margarine consumption
 c) Spurious - both follow similar time trends
 d) Reversed - the causation goes backwards
 
-Answer: _____
+Answer: __c___
 
 ### 4.2 True or False: Research Design
 
 Mark each statement as True (T) or False (F):
 
-_____ Random assignment eliminates all confounders
-_____ Large samples guarantee causal inference
-_____ Natural experiments can establish causation
-_____ Correlation is necessary but not sufficient for causation
-_____ Time series data always shows causation
+__F___ Random assignment eliminates all confounders
+__F___ Large samples guarantee causal inference
+__T___ Natural experiments can establish causation
+__T___ Correlation is necessary but not sufficient for causation
+__F___ Time series data always shows causation
 
 ### 4.3 Match: Causal Mechanisms
 
@@ -567,7 +693,7 @@ d) Voting laws → Turnout
 3. Agenda setting and framing
 4. Access and convenience
 
-Matches: a = _____, b = _____, c = _____, d = _____
+Matches: a = __2__, b = __1___, c = __3___, d = __4___
 
 ### 4.4 Multiple Choice: Selecting on the Outcome
 
@@ -578,7 +704,7 @@ b) By studying only cases where terrorism occurred (selecting on the outcome), t
 c) The correlation is too weak to interpret
 d) Suicide terrorism causes occupation, not the other way around
 
-Answer: _____
+Answer: __b___
 
 # AI Exercises
 
@@ -630,7 +756,7 @@ Ask Claude to help you:
 - Test for association between minimum wage and employment
 
 ```{r}
-
+cor.test(wage_data$min_wage, wage_data$unemployment_rate)
 ```
 
 ### 5.3 Alternative Explanations
@@ -672,7 +798,13 @@ Work with Claude to:
 - Test whether conservatives choose Fox News (selection)
 
 ```{r}
-
+media_data %>%
+filter(survey_wave == 1) %>%
+group_by(party_id) %>%
+summarize(
+mean_fox_hours = mean(fox_news_hours),
+mean_msnbc_hours = mean(msnbc_hours)
+)
 ```
 
 ### 6.3 Confounding Factors
@@ -755,7 +887,13 @@ Work with Claude to:
 - Check pre-treatment trends
 
 ```{r}
-
+policy_data %>%
+group_by(policy_adopted) %>%
+summarize(
+mean_outcome = mean(outcome_variable),
+mean_unemployment = mean(unemployment),
+n = n()
+)
 ```
 
 \newpage
