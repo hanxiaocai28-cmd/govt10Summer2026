@@ -1,0 +1,296 @@
+---
+title: "Week 6 · Class 1: Practice Exercises"
+subtitle: "Plotting Data"
+date: "2026"
+format:
+  pdf:
+    toc: false
+    number-sections: true
+    colorlinks: true
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+library(knitr)
+library(formatR)
+# When running chunks interactively, set the working directory to this file's
+# folder so the relative data/ paths resolve. (During render, knitr already
+# uses the document's directory, so this is skipped.)
+if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+  .doc_path <- rstudioapi::getSourceEditorContext()$path
+  if (length(.doc_path) == 1 && nzchar(.doc_path)) setwd(dirname(.doc_path))
+}
+opts_chunk$set(tidy.opts = list(width.cutoff = 60), tidy = FALSE)
+```
+
+# Non-AI Exercises
+
+## 1. Visualization Principles
+
+### 1.1 Multiple Choice: Chart Types
+
+Which visualization is best for showing the relationship between two continuous variables?
+
+a) Bar chart
+b) Pie chart
+c) Scatter plot
+d) Box plot
+
+Answer: _____
+
+### 1.2 Match: Plot Types and Uses
+
+Match each plot type with its best use:
+
+**Plot Types:**
+
+a) Histogram
+b) Line chart
+c) Bar chart
+d) Box plot
+e) Heatmap
+
+**Uses:**
+
+1. Compare categories
+2. Show distribution of one variable
+3. Display trends over time
+4. Show distributions by group
+5. Display correlation matrix
+
+Matches: a = _____, b = _____, c = _____, d = _____, e = _____
+
+### 1.3 True or False: Visualization Best Practices
+
+Mark each statement as True (T) or False (F):
+
+_____ Always start y-axis at zero for bar charts  
+_____ Pie charts are ideal for comparing many categories  
+_____ Color should be used meaningfully, not decoratively  
+_____ 3D effects improve data comprehension  
+_____ Labels should be clear and descriptive
+
+## 2. Grammar of Graphics
+
+### 2.1 Fill in the Blanks: ggplot Components
+
+The main components of a ggplot are:
+
+1. _____ : The dataset  
+2. _____ : Variables mapped to visual properties  
+3. _____ : The type of plot (points, lines, bars)  
+4. _____ : Axis labels and title  
+5. _____ : Overall visual style
+
+Word bank: data, aesthetics (aes), geometries (geom), labels, theme
+
+### 2.2 What does each line add to the plot?
+
+```r
+ggplot(data, aes(x = income, y = vote_share)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  facet_wrap(~region) +
+  theme_minimal()
+```
+
+Line 2: _____  
+Line 3: _____  
+Line 4: _____  
+Line 5: _____
+
+### 2.3 Multiple Choice: Aesthetics
+
+In ggplot, aes() can map variables to:
+
+a) Colors only
+b) X and Y positions only
+c) Multiple visual properties (color, size, shape, etc.)
+d) Statistical transformations
+
+Answer: _____
+
+## 3. Effective Communication
+
+### 3.1 Spot the Error: Bad Visualization
+
+What's wrong with using a pie chart to show changes over 50 time periods?
+
+Problem: _____
+
+### 3.2 Match: Color Choices
+
+Match color use with purpose:
+
+**Color Uses:**
+
+a) Sequential palette  
+b) Diverging palette  
+c) Categorical palette  
+d) Highlight color
+
+**Purposes:**
+
+1. Show distinct unordered groups  
+2. Emphasize one category  
+3. Show values from low to high  
+4. Show values around a midpoint
+
+Matches: a = _____, b = _____, c = _____, d = _____
+
+## 4. Advanced Visualization
+
+### 4.1 True or False: Faceting
+
+About faceting in ggplot:
+
+_____ facet_wrap() creates a grid of plots  
+_____ facet_grid() requires two variables  
+_____ Facets must share the same scale  
+_____ You can combine faceting with grouping  
+_____ Faceting helps avoid overplotting  
+
+### 4.2 Multiple Choice: Handling Overplotting
+
+When you have too many points overlapping, you should:
+
+a) Make points smaller  
+b) Use transparency (alpha)  
+c) Use jittering or binning  
+d) All of the above
+
+Answer: _____
+
+# AI Exercises
+
+**Tips for Working with Claude:**
+
+- Ask for **R code using only tidyverse and ggplot2** (no other packages)
+- Request **simple, focused answers** to your specific question—not complex analyses
+- Ask Claude to **explain what the code is doing** since you're learning
+- For this class, you CAN ask for visualizations—that's the focus!
+- Include the output of `glimpse()` in your prompt so Claude knows your variable names
+
+**Example prompt:** "Using ggplot2 in R, create a line chart showing dem_vote_share over time (year) with different colors for each region. Keep the code simple and explain what each line does. Here is what my data looks like: [paste glimpse output]"
+
+For each AI exercise:
+
+- Work with Claude to create visualizations
+- Record your prompts and describe the plots created
+
+## 5. Election Results Visualization
+
+**Dataset: data/election_visualization.csv**
+
+**Description**: State-level election results over time.
+
+**Variables**:
+
+- `state`: State name (chr)
+- `year`: Election year (int)
+- `dem_vote_share`: Democratic vote percentage (dbl)
+- `rep_vote_share`: Republican vote percentage (dbl)
+- `turnout`: Voter turnout percentage (dbl)
+- `swing_state`: Swing state indicator (lgl)
+- `region`: Geographic region (chr)
+- `electoral_votes`: Number of electoral votes (int)
+- `margin`: Victory margin (dbl)
+- `incumbent_party`: Party of incumbent (chr)
+
+### 5.1 Time Series Visualization
+
+```{r}
+# Load the dataset
+election_data <- read_csv("data/election_visualization.csv")
+
+# Examine the structure
+glimpse(election_data)
+```
+
+### 5.2 Geographic Patterns
+
+Work with Claude to create time series plots showing partisan trends over time
+
+Ask Claude to help you:
+- Create regional comparisons
+- Visualize swing states differently
+- Show electoral vote weights
+
+```{r}
+
+```
+
+## 6. Survey Response Patterns
+
+**Dataset: data/survey_visualization.csv**
+
+**Description**: Large political survey with demographic breakdowns.
+
+**Variables**:
+
+- `respondent_id`: Unique identifier (int)
+- `age_group`: Age category (chr)
+- `education`: Education level (chr)
+- `income_bracket`: Income category (chr)
+- `party_id`: Party identification (chr)
+- `ideology`: Liberal-conservative scale 1-7 (int)
+- `approval_president`: Presidential approval 0-100 (dbl)
+- `approval_congress`: Congressional approval 0-100 (dbl)
+- `trust_media`: Media trust 0-100 (dbl)
+- `political_interest`: Interest level 1-10 (int)
+
+### 6.1 Distribution Visualizations
+
+```{r}
+# Load the dataset
+survey_data <- read_csv("data/survey_visualization.csv")
+
+# Check the structure
+glimpse(survey_data)
+```
+
+### 6.2 Group Comparisons
+
+Use Claude to create effective distribution plots for different variables of your choice.
+
+```{r}
+
+```
+
+## 7. Legislative Behavior
+
+**Dataset: data/legislative_visualization.csv**
+
+**Description**: Congressional voting patterns and member characteristics.
+
+**Variables**:
+
+- `member_id`: Legislator identifier (int)
+- `name`: Member name (chr)
+- `party`: Political party (chr)
+- `state`: State abbreviation (chr)
+- `chamber`: House or Senate (chr)
+- `ideology_score`: DW-NOMINATE score (dbl)
+- `votes_with_party`: Percentage voting with party (dbl)
+- `bills_sponsored`: Number of bills sponsored (int)
+- `committee_leadership`: Leadership positions (int)
+- `tenure`: Years in office (int)
+
+### 7.1 Ideology Visualization
+
+```{r}
+# Load the dataset
+legislative_data <- read_csv("data/legislative_visualization.csv")
+
+# Explore the data
+glimpse(legislative_data)
+```
+
+### 7.2 Bivariate Relationships
+
+Work with Claude to visualize ideological distributions and polarization.
+
+```{r}
+
+```

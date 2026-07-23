@@ -1,0 +1,1001 @@
+respondent_id,age_group,education,income_bracket,party_id,ideology,approval_president,approval_congress,trust_media,political_interest
+1,65+,Some College,30-60k,Republican,3,9.5,10,58,10
+2,65+,HS,30-60k,Independent,3,16.7,14.1,45.2,9
+3,65+,Graduate,<30k,Republican,4,34,16.1,21.7,3
+4,45-64,HS,<30k,Democrat,3,0,56.1,51.1,3
+5,65+,Graduate,>100k,Democrat,2,36.4,25.1,46.4,1
+6,18-29,College,30-60k,Republican,7,0,4.2,38.8,1
+7,45-64,College,>100k,Independent,7,33.6,52.2,49.5,8
+8,30-44,Some College,30-60k,Republican,3,61.6,10.2,37.2,3
+9,45-64,College,60-100k,Independent,6,37.4,54.9,43.5,8
+10,45-64,HS,>100k,Independent,7,4.7,26.3,37.9,2
+11,65+,College,<30k,Democrat,1,29.6,42.3,62.3,2
+12,45-64,HS,>100k,Republican,1,41.9,49.1,73.8,6
+13,45-64,HS,60-100k,Independent,7,16.3,42.3,30.8,6
+14,45-64,College,60-100k,Republican,5,60.7,30.2,34,3
+15,30-44,College,>100k,Republican,6,33.2,33,14,2
+16,65+,College,<30k,Democrat,7,90.9,0,52.5,4
+17,18-29,Graduate,<30k,Republican,6,26.2,15.1,31.3,2
+18,65+,Some College,60-100k,Democrat,3,14.7,0,15.9,2
+19,30-44,Some College,>100k,Republican,4,46.9,6.2,34.2,1
+20,30-44,College,<30k,Democrat,3,23.1,42.3,18.4,2
+21,65+,Graduate,30-60k,Democrat,6,52.4,27.6,22.7,4
+22,18-29,Some College,60-100k,Democrat,3,55.4,17.9,45,1
+23,18-29,College,>100k,Democrat,5,21.9,35,78.2,2
+24,65+,Graduate,>100k,Democrat,2,35.6,26.1,48.8,6
+25,45-64,College,30-60k,Democrat,5,100,7.2,49.4,7
+26,45-64,HS,60-100k,Democrat,1,30.2,20.1,15.9,9
+27,30-44,Some College,60-100k,Democrat,7,1,55.8,33.8,8
+28,18-29,College,60-100k,Independent,4,30.5,6,25.2,1
+29,18-29,HS,30-60k,Republican,7,69.2,67.6,25.4,2
+30,18-29,Graduate,<30k,Republican,3,0,36.1,40.1,7
+31,18-29,HS,60-100k,Independent,4,50,41.1,59.9,5
+32,45-64,College,30-60k,Republican,5,94.3,22,35.5,8
+33,45-64,Graduate,60-100k,Independent,2,8,5.2,38.1,5
+34,45-64,HS,30-60k,Republican,6,51.6,52.1,73.9,1
+35,45-64,Some College,>100k,Democrat,2,68.8,41.3,52.3,8
+36,18-29,Graduate,60-100k,Independent,5,100,13,48.6,10
+37,65+,Graduate,60-100k,Democrat,2,46.4,4.2,33,3
+38,18-29,Some College,30-60k,Independent,2,59.1,47.5,21.7,4
+39,18-29,College,<30k,Independent,1,47,30,46,3
+40,30-44,Some College,30-60k,Independent,6,8.9,0,5.1,7
+41,18-29,Graduate,30-60k,Democrat,5,53.6,10.5,41.4,5
+42,30-44,HS,>100k,Independent,3,84.5,24.2,0,9
+43,30-44,HS,60-100k,Republican,1,82.7,22.2,64.7,6
+44,65+,HS,<30k,Democrat,5,65.1,18.9,7.4,2
+45,30-44,HS,30-60k,Republican,4,55.9,25.7,50.6,9
+46,18-29,HS,30-60k,Independent,1,48.4,18.1,25.6,5
+47,45-64,HS,<30k,Republican,6,21.4,33,60,3
+48,65+,HS,<30k,Independent,7,44.1,23.8,46.2,2
+49,18-29,HS,60-100k,Democrat,6,27.4,23.9,28.3,8
+50,30-44,College,>100k,Democrat,4,48,16.1,53.8,4
+51,30-44,College,<30k,Democrat,2,51.7,9.3,41.9,3
+52,30-44,HS,<30k,Republican,2,43.5,0,43,5
+53,30-44,HS,60-100k,Democrat,1,34.4,14.9,35.3,10
+54,18-29,HS,30-60k,Democrat,4,48.6,50.5,75.2,5
+55,65+,Graduate,>100k,Democrat,1,56.9,28.4,68.7,8
+56,30-44,HS,<30k,Independent,2,30.4,25.1,44.9,5
+57,18-29,College,>100k,Republican,2,40.8,20.8,31.7,5
+58,18-29,College,>100k,Democrat,3,24.6,7.4,40.2,6
+59,65+,College,>100k,Democrat,6,63.7,52.5,40.7,5
+60,45-64,Graduate,30-60k,Independent,7,39.2,31.9,1.8,1
+61,18-29,HS,60-100k,Independent,6,0.6,44.2,50.7,3
+62,45-64,College,30-60k,Republican,3,45.2,41.8,39.5,8
+63,30-44,College,<30k,Democrat,5,60.8,30.4,70.8,3
+64,45-64,HS,>100k,Democrat,7,23.2,12.7,20.9,1
+65,30-44,HS,>100k,Republican,7,46.4,13.5,40.7,5
+66,18-29,Graduate,>100k,Republican,3,63.5,31.2,28,8
+67,30-44,College,30-60k,Independent,6,58,33.5,39.7,8
+68,45-64,Graduate,30-60k,Republican,5,50,35,29.7,10
+69,18-29,HS,<30k,Republican,1,76.9,54.2,11.3,3
+70,18-29,Some College,60-100k,Republican,7,83.5,11.9,38,2
+71,30-44,Some College,<30k,Democrat,3,38.1,26.5,65.7,1
+72,65+,HS,>100k,Republican,1,48.8,31.8,35.4,10
+73,65+,Graduate,<30k,Independent,1,40.8,60.6,7.7,2
+74,65+,HS,60-100k,Independent,4,42.3,58.2,38.6,9
+75,65+,HS,>100k,Republican,6,17.7,1.3,44.2,2
+76,45-64,Graduate,60-100k,Republican,3,41.4,41.6,40.3,9
+77,65+,Graduate,>100k,Democrat,1,76,23,49.1,8
+78,30-44,Some College,30-60k,Republican,6,34.7,9.5,51.7,9
+79,45-64,HS,>100k,Republican,5,26,24,47.7,2
+80,18-29,College,30-60k,Republican,4,17.1,7.6,2,5
+81,45-64,Some College,60-100k,Republican,7,70.3,15.8,63.7,5
+82,65+,HS,<30k,Republican,5,96.1,29.3,37.1,7
+83,45-64,Graduate,30-60k,Independent,5,63.6,27.8,13.6,3
+84,65+,Graduate,60-100k,Republican,6,64.3,19.7,38.2,1
+85,45-64,HS,60-100k,Democrat,2,68.6,21.8,21.6,6
+86,65+,College,30-60k,Republican,1,39.6,7.6,79.6,10
+87,45-64,College,60-100k,Democrat,7,46.6,5.1,38.8,3
+88,18-29,Graduate,60-100k,Republican,7,11.6,0,61.9,1
+89,45-64,College,60-100k,Democrat,3,20,44.9,27,2
+90,18-29,Graduate,30-60k,Democrat,2,78.2,0,73.8,1
+91,45-64,Some College,30-60k,Independent,1,88.2,21.2,36.5,8
+92,30-44,Some College,<30k,Independent,7,77.1,46.5,42.7,4
+93,65+,Graduate,60-100k,Democrat,6,64.8,49.3,61.5,8
+94,18-29,College,30-60k,Republican,5,53.8,55.6,65.2,8
+95,45-64,Some College,<30k,Democrat,1,63.9,6.7,52,3
+96,45-64,Some College,<30k,Independent,4,50.5,22,29,7
+97,45-64,College,<30k,Independent,3,47.3,40.3,26,3
+98,18-29,Graduate,30-60k,Republican,2,69.5,35.5,44.4,2
+99,30-44,Graduate,<30k,Independent,4,49.5,5.6,8.4,9
+100,45-64,College,<30k,Democrat,6,42.9,11.1,80.5,7
+101,45-64,Some College,<30k,Independent,7,10.4,15.4,1.1,2
+102,45-64,HS,<30k,Independent,5,4.3,32.2,0,1
+103,45-64,HS,30-60k,Republican,2,36.1,32,39.4,1
+104,18-29,College,<30k,Democrat,7,35.8,0,37.9,2
+105,45-64,Graduate,<30k,Independent,3,31.5,55.2,0,2
+106,65+,HS,<30k,Democrat,3,29.2,24.7,20.7,5
+107,45-64,Some College,30-60k,Independent,2,61.7,0,18.7,4
+108,65+,College,>100k,Republican,1,41.4,37.5,38.6,9
+109,65+,HS,60-100k,Democrat,7,87.3,27.2,63.6,6
+110,65+,Some College,60-100k,Democrat,5,42.2,43.7,34.5,3
+111,30-44,Some College,<30k,Democrat,5,8.1,27.6,32.9,10
+112,30-44,Some College,<30k,Republican,5,0,44.1,31.3,10
+113,65+,HS,>100k,Independent,5,58.4,10.7,63.4,7
+114,45-64,Some College,60-100k,Republican,2,63.8,44.8,49.5,4
+115,18-29,Graduate,60-100k,Republican,7,51.6,7.1,0,1
+116,45-64,Some College,<30k,Republican,7,68.7,69,37.1,2
+117,65+,Some College,>100k,Independent,7,44.8,8.5,27,10
+118,45-64,Graduate,60-100k,Republican,1,77.6,33.5,22.8,4
+119,30-44,Graduate,60-100k,Republican,5,43.5,51.3,1.2,5
+120,18-29,HS,<30k,Republican,1,39.9,38.2,28,6
+121,45-64,College,<30k,Democrat,2,65.4,43.9,77.6,1
+122,65+,HS,>100k,Independent,5,88.5,57.8,73.5,7
+123,45-64,Graduate,30-60k,Independent,5,2,13.3,16.5,5
+124,65+,Graduate,>100k,Democrat,7,6.4,19.2,6.2,6
+125,30-44,Graduate,>100k,Republican,1,63.8,12.3,10,2
+126,45-64,HS,<30k,Republican,7,64,48.5,29.1,6
+127,45-64,College,60-100k,Independent,3,74.7,31.5,61.4,1
+128,18-29,Some College,60-100k,Independent,1,41.5,30.6,38.8,5
+129,45-64,HS,<30k,Republican,7,46.5,4.9,6.7,9
+130,30-44,HS,60-100k,Republican,7,37.7,44.5,54.5,2
+131,18-29,Some College,60-100k,Republican,3,36.4,32.7,30.5,9
+132,30-44,HS,>100k,Democrat,6,33.7,15,3.1,5
+133,30-44,Some College,>100k,Republican,1,60.6,18.2,29.7,7
+134,30-44,Some College,60-100k,Republican,2,44.3,22.5,68,6
+135,65+,College,>100k,Independent,1,47.1,37.1,29.7,9
+136,45-64,Graduate,30-60k,Independent,1,0,39.1,40.3,7
+137,30-44,College,60-100k,Democrat,1,73.3,57.5,46.6,9
+138,18-29,Graduate,>100k,Independent,1,34.4,27.3,0,5
+139,30-44,Some College,>100k,Independent,2,24,36,59,8
+140,65+,Some College,30-60k,Republican,3,26,31.9,45.7,5
+141,65+,Some College,30-60k,Democrat,7,3.9,0,4.7,6
+142,65+,Some College,<30k,Democrat,2,37.3,20.4,25,3
+143,45-64,Some College,>100k,Independent,7,48.1,18.9,8.2,2
+144,65+,Graduate,<30k,Democrat,2,90.7,26.3,41.9,9
+145,45-64,Graduate,60-100k,Independent,3,49.2,0,31.1,8
+146,65+,College,>100k,Republican,4,64.9,24.9,89.4,1
+147,30-44,College,60-100k,Independent,7,73,20.5,41.8,9
+148,65+,HS,30-60k,Democrat,6,56.9,36.7,60.8,7
+149,30-44,HS,60-100k,Democrat,7,24.4,37.3,45.1,5
+150,18-29,Some College,<30k,Democrat,1,76,5.7,46.5,7
+151,18-29,College,30-60k,Democrat,2,41.7,10.9,0,3
+152,30-44,HS,<30k,Republican,1,41,61.5,62.7,4
+153,45-64,HS,60-100k,Independent,6,26.4,31.4,74.7,10
+154,30-44,Graduate,>100k,Republican,2,97.1,3.1,28.8,9
+155,30-44,Graduate,60-100k,Independent,7,34.7,9.4,51.1,5
+156,45-64,Graduate,30-60k,Independent,1,39.4,7.8,7.2,8
+157,30-44,Some College,>100k,Republican,3,59.1,20.5,40.1,8
+158,45-64,College,60-100k,Republican,3,36.3,28.7,1.4,2
+159,30-44,HS,60-100k,Republican,3,58.8,25.8,16.1,3
+160,30-44,College,<30k,Democrat,4,78.3,28.7,80.8,3
+161,30-44,Some College,<30k,Republican,7,32.1,41.9,56.8,3
+162,18-29,Some College,>100k,Democrat,7,65.2,3,42.4,3
+163,45-64,College,30-60k,Democrat,2,42,61.1,38.9,8
+164,18-29,Graduate,30-60k,Democrat,1,49.2,28.7,0,9
+165,45-64,Graduate,<30k,Independent,2,49.2,0,45.4,2
+166,45-64,HS,<30k,Independent,6,22.2,0,27,5
+167,18-29,Graduate,<30k,Republican,5,73.6,15,22.2,8
+168,18-29,College,>100k,Republican,7,49.4,31.4,76.9,10
+169,45-64,Some College,>100k,Independent,1,16.6,38.1,75.8,4
+170,45-64,College,<30k,Democrat,7,54.7,22.3,77,10
+171,65+,College,<30k,Democrat,7,100,41.4,27.2,8
+172,30-44,Some College,>100k,Republican,5,85.3,40,70.2,6
+173,65+,Some College,>100k,Republican,5,57.5,13.1,28.1,5
+174,18-29,Graduate,<30k,Independent,6,39,47.6,26.8,3
+175,65+,Some College,30-60k,Democrat,4,36.4,28,36.3,5
+176,18-29,Graduate,<30k,Republican,5,63.8,11.3,35.9,10
+177,30-44,HS,30-60k,Republican,6,56.4,28.2,30,4
+178,30-44,HS,>100k,Democrat,5,60.3,20.5,21.8,6
+179,45-64,HS,<30k,Independent,5,27.2,35.1,56.7,6
+180,45-64,Graduate,30-60k,Republican,3,58.1,5.5,74.9,8
+181,18-29,College,<30k,Democrat,1,0,26,42.4,4
+182,18-29,Some College,<30k,Republican,1,60.3,37.6,25.3,9
+183,45-64,Graduate,>100k,Republican,6,68.6,20.4,25.5,5
+184,30-44,Graduate,30-60k,Democrat,6,18.9,21.3,0,9
+185,18-29,HS,>100k,Republican,5,68.7,36.8,24.8,5
+186,65+,Graduate,30-60k,Republican,4,79.2,62.3,44.3,5
+187,45-64,Some College,30-60k,Republican,3,42.4,6.3,40.6,6
+188,45-64,HS,60-100k,Republican,5,41.2,27.2,34.2,3
+189,45-64,College,60-100k,Democrat,4,48.7,30.1,0,10
+190,18-29,Some College,60-100k,Republican,1,72.7,25.1,33.4,5
+191,45-64,HS,<30k,Democrat,3,42.9,20.1,70,1
+192,30-44,HS,30-60k,Democrat,1,34.4,52.8,11.3,5
+193,45-64,Graduate,<30k,Independent,2,44.8,62,33.8,7
+194,18-29,HS,30-60k,Republican,6,59.5,12.5,41.5,9
+195,30-44,HS,60-100k,Democrat,5,40.6,30.3,70.1,1
+196,18-29,College,30-60k,Republican,1,54.9,16.3,55,6
+197,30-44,HS,<30k,Independent,6,57.9,12.6,0,9
+198,30-44,College,<30k,Republican,6,93.6,0,41.5,2
+199,30-44,HS,>100k,Democrat,6,63.7,16.2,20.9,4
+200,65+,College,30-60k,Republican,1,58.6,9.7,29.9,4
+201,65+,College,60-100k,Republican,2,32.3,8.6,18.1,4
+202,45-64,HS,60-100k,Democrat,7,67.7,0,45.6,6
+203,45-64,College,>100k,Independent,7,57.3,0,54.7,8
+204,45-64,College,<30k,Democrat,6,57.5,42.5,0,6
+205,30-44,HS,<30k,Democrat,3,53.6,11.3,26.5,5
+206,30-44,Some College,<30k,Democrat,3,19,46.4,15.5,10
+207,65+,HS,>100k,Independent,1,19.6,53.1,50.4,6
+208,30-44,Some College,60-100k,Republican,3,42.8,40.4,61,5
+209,30-44,College,<30k,Republican,1,71,36.2,42.8,8
+210,45-64,College,60-100k,Democrat,2,35.4,20.5,48.9,3
+211,18-29,College,60-100k,Democrat,6,19.7,51.4,23.5,1
+212,65+,Some College,60-100k,Democrat,2,27.8,17.4,31.1,5
+213,30-44,College,<30k,Republican,7,50,18.5,46.1,6
+214,45-64,HS,30-60k,Democrat,4,10.9,27.8,59.4,5
+215,45-64,Graduate,30-60k,Republican,7,18.3,25.2,42.8,5
+216,65+,College,30-60k,Independent,3,62.3,39.3,2.8,1
+217,65+,HS,60-100k,Republican,6,33.5,0,48.6,3
+218,65+,Graduate,30-60k,Democrat,6,45.6,30.6,66.7,3
+219,18-29,HS,<30k,Republican,3,42.1,32.8,47.9,5
+220,45-64,College,30-60k,Democrat,4,45.8,42.2,15.8,10
+221,18-29,HS,30-60k,Democrat,7,64.6,0,11.7,5
+222,30-44,Graduate,60-100k,Republican,7,0,28.9,49.2,7
+223,65+,Graduate,60-100k,Democrat,4,75.6,6.9,47.9,7
+224,65+,Some College,>100k,Democrat,5,47.7,36.1,1.8,9
+225,45-64,Graduate,<30k,Republican,3,100,25.6,13.5,10
+226,45-64,HS,<30k,Republican,7,42.3,25.5,33.9,1
+227,30-44,College,>100k,Independent,2,69,12.4,54.7,4
+228,45-64,HS,<30k,Republican,6,100,0,72.3,2
+229,45-64,HS,60-100k,Republican,1,32,27.2,38.6,4
+230,45-64,Graduate,30-60k,Republican,1,69.4,39,36.9,9
+231,18-29,College,>100k,Independent,4,14.9,21.8,26.1,6
+232,65+,Graduate,30-60k,Democrat,1,34.9,18.7,45.4,8
+233,18-29,Graduate,>100k,Republican,5,39.4,35.3,46.8,8
+234,45-64,College,>100k,Democrat,3,46.3,10.3,39.8,10
+235,30-44,Graduate,<30k,Republican,6,51.2,10,28.7,6
+236,18-29,Graduate,30-60k,Republican,1,81.8,1,14.8,1
+237,45-64,College,60-100k,Republican,5,60.8,40,12.3,10
+238,65+,College,30-60k,Independent,4,74.2,16,27.4,4
+239,65+,College,30-60k,Independent,3,63.6,15.5,69,5
+240,18-29,College,>100k,Democrat,6,57.2,37.9,87.6,9
+241,18-29,Graduate,60-100k,Democrat,5,25.8,66,46.5,5
+242,18-29,Graduate,30-60k,Independent,3,94.8,12,12.1,1
+243,30-44,Some College,30-60k,Republican,4,33.8,35,57.4,8
+244,18-29,College,60-100k,Democrat,1,71.3,18.2,56.4,10
+245,30-44,HS,<30k,Democrat,4,25.6,3.6,21.9,9
+246,45-64,Some College,60-100k,Independent,2,6.2,30,44.8,3
+247,30-44,College,<30k,Democrat,1,56,51.4,66.1,4
+248,30-44,Graduate,30-60k,Independent,4,57.5,30.9,43.6,5
+249,65+,College,60-100k,Independent,4,52.8,7.9,39,9
+250,18-29,College,30-60k,Democrat,6,49.8,27.9,25.5,4
+251,45-64,Graduate,<30k,Republican,2,52.2,53.7,69,4
+252,30-44,Graduate,30-60k,Republican,7,59,51.9,75.6,5
+253,65+,HS,>100k,Republican,2,19.8,48,54,4
+254,30-44,Graduate,>100k,Republican,7,40,21.9,48.6,3
+255,65+,HS,60-100k,Democrat,7,3.8,37.3,78.1,5
+256,18-29,Graduate,>100k,Democrat,4,31,21.8,60.5,5
+257,18-29,Some College,60-100k,Independent,5,30.6,0,72.1,4
+258,65+,HS,>100k,Democrat,5,53,33.3,37.8,4
+259,45-64,Some College,30-60k,Democrat,5,64.7,12.1,32.8,10
+260,45-64,HS,60-100k,Republican,5,74.1,0,17.5,8
+261,45-64,Some College,>100k,Independent,6,54,20.6,49.8,1
+262,45-64,Graduate,30-60k,Democrat,7,90.3,30.3,73.2,6
+263,45-64,HS,<30k,Democrat,1,44.1,24.8,18.6,1
+264,45-64,College,30-60k,Democrat,1,55.9,12.3,33,8
+265,45-64,College,60-100k,Independent,5,57.6,51.3,48.1,1
+266,65+,College,<30k,Democrat,2,25.8,21.8,47.3,1
+267,30-44,HS,30-60k,Democrat,5,34.7,26.3,45.8,2
+268,30-44,College,60-100k,Democrat,3,69.3,23.5,33.1,10
+269,30-44,College,<30k,Republican,5,42.7,18.2,39.2,9
+270,30-44,Graduate,>100k,Democrat,7,52.9,27.7,31.3,8
+271,30-44,Some College,30-60k,Republican,2,13.3,33.3,21.4,4
+272,45-64,HS,<30k,Independent,3,29.1,15.6,20.8,7
+273,65+,Graduate,>100k,Democrat,1,70.6,24.8,4.1,5
+274,45-64,Some College,60-100k,Democrat,1,28.6,12.8,22,9
+275,45-64,HS,30-60k,Independent,5,20.9,2.1,65.8,6
+276,65+,College,60-100k,Democrat,7,13.1,47.6,50.8,8
+277,45-64,HS,<30k,Republican,3,64.1,35.9,33.1,2
+278,45-64,College,60-100k,Democrat,1,0,9.8,43.4,5
+279,65+,HS,60-100k,Republican,4,42.7,48.1,84.7,8
+280,30-44,College,>100k,Independent,7,31.9,0,31.4,8
+281,30-44,College,30-60k,Democrat,2,55.6,17,42.1,1
+282,30-44,HS,60-100k,Independent,6,47,9,38.1,5
+283,30-44,Some College,60-100k,Republican,4,66.7,16.1,54.3,3
+284,18-29,HS,>100k,Republican,6,59.9,29.6,58.6,7
+285,18-29,Graduate,30-60k,Democrat,2,55.4,3.4,26.3,2
+286,45-64,College,60-100k,Democrat,1,16.8,0,20.7,2
+287,45-64,College,60-100k,Republican,2,54.1,27.8,41.1,4
+288,45-64,Graduate,60-100k,Republican,2,78.9,27.1,13.5,1
+289,65+,Graduate,<30k,Independent,5,0.1,52.7,7,10
+290,30-44,College,30-60k,Democrat,5,56.9,9.7,95.1,8
+291,45-64,College,30-60k,Republican,4,62.3,7.8,43.4,2
+292,45-64,College,>100k,Republican,4,52.5,14.2,7.7,10
+293,65+,College,>100k,Republican,4,43.9,14.6,45.6,10
+294,65+,HS,30-60k,Republican,5,51.4,49.2,46.1,1
+295,45-64,College,60-100k,Republican,7,45,30.8,53.6,9
+296,45-64,Graduate,60-100k,Independent,4,25.8,58.4,37,7
+297,45-64,Some College,>100k,Independent,4,68.8,75.7,55.5,3
+298,45-64,HS,<30k,Independent,4,56.9,47,70.4,4
+299,45-64,College,<30k,Democrat,1,27.1,31.5,24.9,9
+300,45-64,HS,30-60k,Democrat,3,66.5,22.2,73.6,9
+301,45-64,College,30-60k,Democrat,7,53.3,53.1,59.1,1
+302,65+,Graduate,30-60k,Republican,3,21.6,9.6,32.5,9
+303,18-29,HS,>100k,Democrat,3,55,66.8,0,1
+304,30-44,College,60-100k,Democrat,7,40.2,15.3,41.8,8
+305,45-64,Some College,60-100k,Republican,4,46,37.4,71.2,8
+306,65+,HS,60-100k,Democrat,4,20.3,19.5,52.7,8
+307,30-44,Graduate,<30k,Independent,5,31.6,50.2,69.4,1
+308,30-44,Graduate,>100k,Republican,2,47.4,21.6,31.1,8
+309,65+,College,<30k,Republican,3,22.8,44.3,33.5,2
+310,65+,College,30-60k,Republican,2,21,0,15.9,3
+311,45-64,HS,>100k,Republican,6,38,9.7,63.3,9
+312,45-64,College,>100k,Republican,4,54.3,18.7,54.4,3
+313,65+,HS,<30k,Independent,7,93.1,23.7,59.9,8
+314,65+,Graduate,30-60k,Democrat,6,62,48.9,44.5,9
+315,45-64,College,<30k,Independent,1,0,10.2,61,3
+316,30-44,HS,60-100k,Republican,5,96.1,18.5,40,3
+317,30-44,Some College,60-100k,Independent,5,47.9,48.2,18,3
+318,45-64,Some College,30-60k,Independent,4,49.9,21.9,64.1,6
+319,45-64,HS,30-60k,Democrat,4,46.4,34.4,31.3,10
+320,45-64,Some College,60-100k,Independent,2,26.7,23.1,29.8,6
+321,30-44,Graduate,>100k,Democrat,6,18,0,0,10
+322,45-64,College,<30k,Independent,6,45.8,40.3,44,8
+323,45-64,HS,30-60k,Democrat,1,66,33.7,30.7,10
+324,45-64,College,30-60k,Republican,1,60.8,50.8,32.7,2
+325,18-29,Graduate,30-60k,Republican,1,24.9,20,45.1,9
+326,45-64,HS,>100k,Democrat,7,49.3,3.1,36.1,10
+327,65+,HS,60-100k,Democrat,1,48.8,24.6,41.1,9
+328,18-29,HS,60-100k,Democrat,4,81.3,17.5,0,2
+329,45-64,Some College,30-60k,Republican,5,41.1,12.9,25.9,7
+330,45-64,Some College,<30k,Democrat,1,74.1,38.7,38.9,9
+331,45-64,Graduate,30-60k,Republican,7,47.9,12.9,13.3,9
+332,18-29,Some College,<30k,Independent,4,0,0,48.7,8
+333,65+,College,<30k,Independent,1,0,10.9,0,8
+334,65+,Some College,30-60k,Independent,7,26,12.9,0,9
+335,45-64,Graduate,60-100k,Independent,6,48.3,19.1,22.7,3
+336,45-64,College,>100k,Democrat,6,0,48.1,55.8,6
+337,65+,Graduate,>100k,Democrat,3,53.4,40.8,47.7,5
+338,30-44,Graduate,60-100k,Democrat,3,26.7,28.2,74.2,10
+339,18-29,HS,>100k,Republican,6,3.8,15.4,26.4,4
+340,30-44,Graduate,>100k,Republican,7,28.7,10,29.7,10
+341,30-44,College,60-100k,Democrat,1,20.5,3.8,28.6,2
+342,65+,Some College,<30k,Republican,2,28.7,55.6,43.7,8
+343,45-64,Some College,60-100k,Republican,4,71.2,18.3,41.6,8
+344,45-64,College,<30k,Republican,3,20.2,41.7,0,10
+345,18-29,Graduate,>100k,Democrat,2,12.4,24.4,32,7
+346,65+,College,30-60k,Republican,7,53.5,0,46.5,2
+347,65+,College,<30k,Republican,2,5.2,24.9,0,1
+348,18-29,College,30-60k,Republican,4,48.1,31.2,14.9,7
+349,45-64,Graduate,>100k,Republican,2,5.2,13.5,3.4,4
+350,30-44,Graduate,>100k,Democrat,6,42.6,41.5,35.9,1
+351,45-64,Graduate,>100k,Independent,4,1.9,25,74.5,1
+352,18-29,College,<30k,Republican,4,33.9,40.5,62.9,7
+353,65+,Some College,<30k,Republican,6,0.4,44,13.4,10
+354,45-64,Graduate,30-60k,Democrat,4,72,62.1,37.2,4
+355,45-64,HS,>100k,Republican,2,44.9,12.7,43.5,9
+356,45-64,HS,>100k,Democrat,5,62.2,44.1,13.8,8
+357,45-64,College,60-100k,Democrat,7,23,24.1,15,3
+358,18-29,Some College,>100k,Democrat,7,52.3,31.4,15.9,8
+359,18-29,Graduate,>100k,Independent,7,71.9,37.7,66.5,3
+360,45-64,College,<30k,Republican,1,74.5,33.1,0,1
+361,65+,College,30-60k,Independent,3,37.5,22,11.1,10
+362,45-64,Some College,<30k,Democrat,3,53,43.4,46.3,6
+363,30-44,Some College,>100k,Democrat,1,0,0,53.9,1
+364,65+,Some College,30-60k,Democrat,7,5.3,71.4,30.3,4
+365,65+,HS,60-100k,Republican,2,60.6,33.2,1.6,3
+366,18-29,Graduate,<30k,Republican,4,29,0,36.5,6
+367,65+,Graduate,<30k,Democrat,6,32,46.5,57.4,4
+368,30-44,College,60-100k,Republican,5,41.6,7.5,66.5,6
+369,65+,Some College,60-100k,Independent,6,83.2,30.2,33,4
+370,30-44,HS,<30k,Independent,7,66.9,14,22.6,4
+371,45-64,Some College,>100k,Republican,7,62,0,24.2,4
+372,65+,HS,60-100k,Democrat,5,53,10.2,35,7
+373,30-44,Some College,>100k,Independent,6,70.2,24.3,28.6,10
+374,65+,College,>100k,Independent,4,91,18.4,61.7,9
+375,45-64,Some College,>100k,Republican,6,15,0,19.4,6
+376,30-44,College,30-60k,Republican,2,59.8,0,6.8,9
+377,45-64,Some College,<30k,Republican,5,77.6,96.9,26.7,7
+378,18-29,HS,<30k,Democrat,6,60.5,57.2,18.7,8
+379,30-44,Graduate,60-100k,Republican,3,48.1,19.2,17.1,10
+380,45-64,College,<30k,Democrat,1,16.8,26.9,34.6,4
+381,45-64,HS,<30k,Independent,5,49.9,48.6,8.2,7
+382,30-44,College,60-100k,Independent,6,37.4,27.2,24.5,9
+383,45-64,Some College,60-100k,Independent,2,61.6,2.4,23.9,1
+384,18-29,HS,30-60k,Republican,4,69,0,10.7,4
+385,30-44,College,<30k,Democrat,2,59.2,0,19.6,7
+386,30-44,Some College,60-100k,Democrat,4,20.3,23.3,27.6,10
+387,18-29,HS,60-100k,Democrat,4,22.5,13.3,53.3,4
+388,65+,HS,>100k,Democrat,3,80.6,48.3,34.4,3
+389,45-64,HS,>100k,Democrat,5,38.1,34.4,10.1,2
+390,45-64,HS,60-100k,Independent,2,55,33.3,32.4,4
+391,30-44,College,>100k,Republican,2,57.7,40.2,49.8,2
+392,30-44,Graduate,30-60k,Democrat,6,59.5,0,51.1,3
+393,45-64,Graduate,>100k,Independent,3,53.9,36.3,75.9,4
+394,65+,HS,>100k,Democrat,3,38.1,37.8,2.8,3
+395,30-44,Some College,<30k,Democrat,4,29.9,14.7,25.3,7
+396,65+,HS,60-100k,Republican,3,30.8,36.5,32.2,4
+397,65+,Some College,30-60k,Independent,4,15.1,67.7,33.7,4
+398,65+,HS,<30k,Republican,4,12.5,0,23.9,4
+399,65+,College,60-100k,Democrat,1,24.4,27.8,56.8,5
+400,45-64,College,60-100k,Independent,3,60.7,35.7,32.8,4
+401,65+,HS,60-100k,Independent,3,34.7,38.9,5.7,2
+402,45-64,Some College,>100k,Democrat,4,42.7,23.3,47.4,3
+403,30-44,HS,<30k,Independent,7,59.3,1.3,32.2,10
+404,65+,HS,<30k,Republican,1,59,58.7,16.8,2
+405,65+,College,>100k,Independent,4,47.2,28.1,59.3,4
+406,18-29,College,60-100k,Democrat,5,36.2,42,58,4
+407,65+,Graduate,30-60k,Independent,2,26.7,26.3,22.5,3
+408,65+,College,>100k,Republican,1,37.1,27,91.8,2
+409,65+,Graduate,>100k,Democrat,4,52.9,0,10.5,8
+410,45-64,Graduate,60-100k,Democrat,1,55.4,15.3,11.7,1
+411,65+,Graduate,>100k,Republican,2,62.4,14.5,37.4,4
+412,30-44,College,30-60k,Republican,4,38,22,25.9,1
+413,18-29,Some College,>100k,Independent,3,43.9,8.9,71.6,3
+414,45-64,Graduate,<30k,Republican,3,80,51.4,22.5,6
+415,18-29,Graduate,>100k,Republican,2,32,3.8,60.2,7
+416,18-29,College,30-60k,Democrat,2,35.8,18.3,22.4,8
+417,18-29,HS,>100k,Democrat,2,54.8,25.6,3.6,8
+418,18-29,Graduate,>100k,Independent,6,6.8,24.6,36.7,3
+419,45-64,College,>100k,Democrat,3,52.4,38.1,16.7,5
+420,30-44,HS,>100k,Democrat,4,59.6,0,38.2,5
+421,30-44,Some College,30-60k,Democrat,6,75.6,38,27.4,5
+422,45-64,Some College,>100k,Republican,3,32.1,13.4,55.3,2
+423,30-44,HS,<30k,Democrat,7,30.9,0,31.1,7
+424,45-64,Graduate,60-100k,Independent,2,17.1,33.7,46.6,1
+425,65+,College,<30k,Democrat,3,16.4,27.3,80.8,5
+426,45-64,Some College,60-100k,Republican,6,44,16.2,42.5,10
+427,45-64,Graduate,60-100k,Republican,5,77.3,20.7,36.3,4
+428,45-64,HS,60-100k,Independent,3,31.7,39.8,31.1,6
+429,45-64,Graduate,30-60k,Democrat,2,28.9,23.4,71.1,3
+430,65+,Graduate,>100k,Republican,1,62.6,17.1,31.9,9
+431,65+,Graduate,60-100k,Republican,4,65.5,12.8,79.7,8
+432,18-29,Some College,60-100k,Republican,1,51,10.2,2.7,8
+433,45-64,College,30-60k,Republican,3,46.5,39.7,43.4,1
+434,30-44,College,<30k,Republican,4,100,35.7,0,10
+435,45-64,Graduate,>100k,Republican,7,82.1,13.3,33.3,4
+436,45-64,College,>100k,Independent,6,0,46.5,11.3,1
+437,65+,Some College,>100k,Independent,6,0,30.5,34.3,4
+438,45-64,Graduate,>100k,Democrat,7,29.1,0.6,38.1,2
+439,18-29,Some College,30-60k,Republican,3,79.4,22.9,56.3,6
+440,18-29,College,30-60k,Democrat,3,38.3,9.9,76.2,2
+441,45-64,HS,>100k,Independent,3,51.9,19,23.5,3
+442,45-64,Some College,60-100k,Independent,7,23.5,19.2,38.4,4
+443,30-44,Some College,30-60k,Republican,7,53.7,25.8,59.6,9
+444,65+,Graduate,>100k,Democrat,7,27.3,13.4,25.8,6
+445,45-64,College,>100k,Republican,2,19.4,31.9,48.9,10
+446,18-29,College,60-100k,Republican,6,24.4,52.3,49.6,5
+447,30-44,Graduate,<30k,Republican,4,20.2,36.5,54.2,1
+448,65+,College,30-60k,Republican,2,64.3,23.1,17.5,8
+449,18-29,College,<30k,Republican,2,26,16.7,38.8,6
+450,30-44,Some College,>100k,Democrat,2,78.6,29.8,60,3
+451,30-44,HS,<30k,Democrat,5,28,35.4,44.1,3
+452,18-29,Some College,60-100k,Democrat,4,66.5,19.3,18.2,10
+453,45-64,College,<30k,Independent,2,43.7,23.2,33.1,9
+454,45-64,Some College,>100k,Democrat,1,60.4,17.5,23,7
+455,45-64,Some College,60-100k,Democrat,1,49.3,43,16.6,2
+456,45-64,Some College,<30k,Democrat,5,78.1,26.2,0,10
+457,30-44,College,<30k,Independent,7,48.1,37.4,25,9
+458,30-44,Some College,60-100k,Democrat,7,43.6,32.4,91.6,7
+459,45-64,HS,30-60k,Democrat,4,42.1,0,49.8,9
+460,45-64,Some College,30-60k,Democrat,5,67.5,26.1,0,2
+461,18-29,College,60-100k,Democrat,6,11.4,19.6,45.7,7
+462,18-29,Graduate,>100k,Independent,4,83.1,65.8,26,4
+463,65+,Graduate,<30k,Democrat,3,44.3,32.5,14.6,5
+464,65+,HS,>100k,Republican,5,3.4,22.2,48.7,4
+465,30-44,Some College,<30k,Republican,4,52.3,16.6,30.2,4
+466,18-29,Graduate,>100k,Independent,7,89.5,42.7,30.3,10
+467,18-29,HS,>100k,Independent,5,33.8,22,19.8,1
+468,45-64,Graduate,30-60k,Independent,4,16.4,57,38.9,10
+469,30-44,HS,60-100k,Democrat,7,52.2,28.3,44.2,10
+470,45-64,Some College,30-60k,Democrat,4,54.9,25.7,52.8,3
+471,65+,HS,>100k,Republican,5,47.9,64,57.6,6
+472,30-44,College,>100k,Democrat,7,60.5,11.4,15.3,6
+473,18-29,HS,<30k,Republican,5,65,0,72.3,5
+474,45-64,Graduate,30-60k,Republican,4,68,5.4,55.9,7
+475,65+,Some College,>100k,Independent,5,0,22.4,55.5,2
+476,18-29,Some College,60-100k,Independent,5,47.3,9,15.9,2
+477,45-64,Some College,30-60k,Independent,6,60.3,13.7,29.9,5
+478,18-29,College,<30k,Independent,2,26.8,12.3,35.7,2
+479,65+,HS,30-60k,Republican,7,86.4,42.2,14.6,8
+480,45-64,HS,60-100k,Independent,4,62.2,43.4,22.1,2
+481,30-44,Some College,<30k,Democrat,5,86.8,35.6,51,6
+482,30-44,College,>100k,Democrat,4,38.8,3,100,5
+483,30-44,HS,30-60k,Independent,6,41.3,58.9,41.3,4
+484,30-44,College,<30k,Republican,2,49.6,18.5,33.9,6
+485,30-44,Some College,60-100k,Independent,6,84.8,31.6,31.7,5
+486,45-64,Graduate,>100k,Democrat,3,46.3,20.5,11.8,2
+487,45-64,College,<30k,Democrat,6,52.2,10.7,31.5,9
+488,18-29,Some College,30-60k,Independent,1,44.4,36.3,33.8,7
+489,65+,Graduate,>100k,Democrat,6,33.2,27.7,0,1
+490,18-29,Some College,>100k,Republican,2,58.4,12.2,29.4,2
+491,45-64,Graduate,<30k,Democrat,2,82.8,42.1,60.8,8
+492,65+,Graduate,60-100k,Republican,3,100,46.5,16.7,1
+493,65+,College,>100k,Democrat,6,45.4,70.8,41.2,3
+494,45-64,HS,<30k,Democrat,2,16.9,0,26.1,5
+495,65+,Graduate,>100k,Democrat,1,20.4,23.4,37.9,6
+496,45-64,College,60-100k,Republican,2,45.6,33.4,8.7,8
+497,45-64,Some College,>100k,Democrat,3,18.6,38.2,41.3,6
+498,30-44,Some College,30-60k,Democrat,2,32,24.5,33.6,3
+499,30-44,HS,<30k,Independent,6,45.7,3,62.5,10
+500,65+,Graduate,30-60k,Republican,7,37.9,6.9,32.9,10
+501,65+,HS,30-60k,Democrat,1,25.7,8.5,45,5
+502,65+,Graduate,60-100k,Independent,6,30.6,47.3,68.7,9
+503,45-64,Some College,<30k,Republican,2,29.3,39.2,39.5,6
+504,18-29,Graduate,<30k,Democrat,1,31.1,30.8,47.9,6
+505,65+,College,30-60k,Republican,5,48.1,14.4,84.1,1
+506,45-64,Graduate,60-100k,Independent,6,18,20,63.6,7
+507,30-44,College,30-60k,Republican,3,28.4,0.1,49.9,4
+508,45-64,Graduate,60-100k,Republican,3,39.9,13.8,43.1,5
+509,30-44,HS,<30k,Republican,2,68.2,19,20.7,4
+510,45-64,College,>100k,Republican,3,12.1,27.7,22.6,10
+511,18-29,Some College,>100k,Republican,7,75.4,16.9,46.3,5
+512,45-64,Some College,>100k,Independent,1,53.2,19.1,32.1,1
+513,30-44,College,30-60k,Independent,6,2.1,22.8,66.3,9
+514,45-64,HS,>100k,Republican,7,31.8,0,20.1,5
+515,65+,Some College,>100k,Republican,6,92.2,33,0,3
+516,18-29,Graduate,<30k,Republican,7,24.9,32.1,70.6,10
+517,65+,College,<30k,Independent,1,94.4,31.9,36.8,9
+518,30-44,Some College,60-100k,Democrat,2,50.3,33.2,59.9,6
+519,65+,HS,>100k,Independent,3,90.3,31,44.8,3
+520,45-64,Graduate,>100k,Democrat,6,58.8,40.6,5,4
+521,45-64,Graduate,30-60k,Republican,3,94.4,34.2,12.4,4
+522,45-64,Graduate,60-100k,Republican,4,50.7,0.9,100,5
+523,30-44,Graduate,>100k,Independent,7,16.8,24.7,24,7
+524,65+,College,<30k,Republican,5,71.8,26,12.3,7
+525,65+,Some College,<30k,Republican,2,10.8,56.6,30.2,1
+526,45-64,Some College,>100k,Democrat,3,54.8,29.3,8.3,2
+527,65+,HS,>100k,Independent,5,41.7,19.8,38.9,4
+528,45-64,Graduate,60-100k,Democrat,4,83.1,0.7,9.1,6
+529,30-44,Graduate,<30k,Republican,4,70.6,34.5,59.1,5
+530,18-29,HS,60-100k,Democrat,4,75.9,24.4,56.5,10
+531,30-44,Graduate,30-60k,Republican,5,44.3,29.6,61.5,5
+532,45-64,Graduate,60-100k,Republican,4,9.7,24.1,80.2,6
+533,18-29,Some College,30-60k,Republican,1,22.3,37.3,35.2,10
+534,45-64,Some College,>100k,Democrat,6,41.3,0,35.4,2
+535,18-29,Graduate,60-100k,Democrat,2,32,20.4,10.8,2
+536,30-44,Some College,<30k,Independent,4,45.6,29.8,54.6,2
+537,30-44,College,<30k,Republican,4,78.7,17.6,41.9,2
+538,18-29,Some College,60-100k,Democrat,5,0,49.6,45.6,3
+539,30-44,Graduate,30-60k,Democrat,6,67,10.1,14.2,6
+540,30-44,Some College,>100k,Independent,4,100,0,11.4,8
+541,30-44,Graduate,<30k,Republican,4,82.3,2.7,33.9,8
+542,45-64,HS,60-100k,Republican,1,50,44.2,52.8,7
+543,30-44,HS,30-60k,Republican,1,43.6,47.1,49.2,5
+544,18-29,Some College,>100k,Republican,7,38.5,0,53.4,10
+545,45-64,College,60-100k,Democrat,5,59.5,36.7,22.7,8
+546,30-44,Graduate,30-60k,Democrat,3,34.1,0.4,3.1,1
+547,30-44,HS,<30k,Republican,1,38.1,33.9,53.6,10
+548,45-64,Some College,60-100k,Independent,4,15,22.7,44.9,5
+549,45-64,Some College,60-100k,Independent,5,41.9,38.5,80.2,7
+550,18-29,Graduate,>100k,Democrat,5,90.3,0,4.4,6
+551,45-64,Some College,<30k,Republican,7,50.6,31,23.5,3
+552,65+,Graduate,30-60k,Independent,1,80.3,7.9,57.4,5
+553,45-64,Some College,<30k,Republican,7,74.5,0,28,3
+554,45-64,College,>100k,Democrat,3,31.9,19.9,3.1,6
+555,45-64,Some College,60-100k,Independent,7,81.3,40.4,24.7,6
+556,18-29,HS,60-100k,Republican,2,55,13.4,0,10
+557,45-64,Graduate,30-60k,Democrat,5,38.2,11.4,7.8,2
+558,65+,Some College,<30k,Democrat,4,73,17.8,59.2,3
+559,18-29,Graduate,<30k,Independent,7,99,19,0,1
+560,30-44,Graduate,30-60k,Independent,2,25.3,0,33.2,9
+561,18-29,Some College,>100k,Independent,4,33.4,2.7,41.2,10
+562,45-64,HS,<30k,Democrat,1,69.1,61,14.9,1
+563,45-64,Graduate,>100k,Democrat,4,100,46.5,46.2,2
+564,30-44,College,<30k,Democrat,1,47.2,32.4,15.5,3
+565,45-64,Some College,60-100k,Republican,5,84.6,45,33.4,9
+566,30-44,Some College,60-100k,Republican,5,30.7,64.6,7.9,7
+567,45-64,HS,60-100k,Republican,7,66.3,14.8,0,10
+568,18-29,Graduate,30-60k,Democrat,3,47.7,44.1,0,4
+569,45-64,Graduate,>100k,Independent,4,33.6,32,24.7,3
+570,18-29,Graduate,>100k,Republican,2,51,8.9,71.1,1
+571,65+,College,30-60k,Independent,3,57.9,32.2,16.6,2
+572,30-44,HS,>100k,Republican,7,87.1,12.6,2.8,2
+573,45-64,Some College,>100k,Democrat,2,65.5,46.1,62.9,8
+574,65+,College,>100k,Independent,2,51.1,46.6,0.8,2
+575,65+,Graduate,<30k,Democrat,1,63.9,4.7,19.4,5
+576,45-64,HS,30-60k,Democrat,2,28.2,47.5,43.4,9
+577,18-29,College,60-100k,Independent,1,69.7,16.1,3.9,3
+578,45-64,HS,<30k,Democrat,6,31,11.3,45.4,1
+579,18-29,Graduate,60-100k,Independent,7,32.3,55.2,3.1,5
+580,45-64,College,<30k,Republican,5,48.7,0,69,5
+581,30-44,College,30-60k,Democrat,6,59.7,46.1,13.8,2
+582,45-64,HS,30-60k,Republican,4,72.1,2.5,47.8,10
+583,30-44,Graduate,30-60k,Republican,7,9.3,44.2,84.9,8
+584,45-64,College,<30k,Democrat,2,76.8,46.5,55.7,7
+585,65+,HS,>100k,Republican,1,41.1,46.3,31.4,2
+586,45-64,Graduate,<30k,Independent,7,51.5,25.1,53.4,4
+587,30-44,Graduate,60-100k,Independent,4,30.2,1.3,38.8,8
+588,45-64,Some College,>100k,Independent,1,54.3,3.4,17,4
+589,65+,College,<30k,Democrat,1,5.2,49.2,4.5,2
+590,45-64,College,60-100k,Republican,1,37.4,0,26.2,2
+591,65+,HS,>100k,Independent,5,73.8,29.4,66.6,10
+592,30-44,HS,30-60k,Democrat,5,67.7,11.6,0,4
+593,30-44,Graduate,>100k,Republican,3,72.5,66.9,66.7,8
+594,18-29,HS,>100k,Democrat,5,45.9,33.5,29.4,7
+595,18-29,Graduate,<30k,Democrat,5,80.4,25.2,31.3,1
+596,45-64,College,30-60k,Democrat,2,75.1,51,0,1
+597,30-44,Some College,60-100k,Democrat,7,33,35.1,69.2,9
+598,65+,College,60-100k,Independent,5,44.7,7.7,50.9,1
+599,18-29,Some College,60-100k,Republican,6,48.6,50.4,29,1
+600,65+,Some College,<30k,Republican,6,18.4,26.7,63.3,9
+601,18-29,HS,60-100k,Republican,1,32.8,26.6,39.1,8
+602,45-64,HS,60-100k,Independent,5,45.9,25.9,49,3
+603,45-64,College,30-60k,Republican,1,37.1,9.9,30,4
+604,45-64,Graduate,60-100k,Republican,2,10.5,39.3,31.9,2
+605,30-44,College,30-60k,Republican,1,29.5,28.1,15,5
+606,18-29,College,30-60k,Republican,6,57.6,2.2,38.5,8
+607,45-64,Some College,30-60k,Democrat,4,52.9,23.2,44.1,2
+608,18-29,Graduate,<30k,Republican,6,55.5,61.6,18,5
+609,30-44,Graduate,<30k,Independent,6,73,46.5,53.6,1
+610,45-64,College,<30k,Republican,4,96.4,18.5,21,7
+611,45-64,HS,60-100k,Democrat,4,74.9,27.7,46.1,2
+612,65+,Some College,60-100k,Republican,3,72.1,40.5,1.1,9
+613,65+,College,>100k,Independent,1,44.9,15.8,37,8
+614,45-64,HS,60-100k,Republican,2,17.8,68.5,0,8
+615,45-64,Graduate,30-60k,Independent,6,35.1,25.3,58.8,10
+616,30-44,College,<30k,Independent,3,37.3,89.7,1.1,9
+617,45-64,HS,30-60k,Republican,4,35.5,0,6.5,2
+618,30-44,HS,<30k,Democrat,4,23,18.3,34,4
+619,18-29,Graduate,>100k,Democrat,2,36.7,41.1,8.9,9
+620,18-29,HS,30-60k,Democrat,7,5.4,0.4,20.1,2
+621,30-44,Some College,<30k,Independent,1,59.9,23.5,49.5,5
+622,65+,Some College,30-60k,Republican,5,37.1,40.7,62.9,9
+623,30-44,Some College,>100k,Republican,1,99,39.7,22.7,7
+624,30-44,Some College,>100k,Republican,6,33.3,41.3,38.6,6
+625,18-29,College,60-100k,Republican,4,51.4,40.2,0,7
+626,30-44,College,>100k,Democrat,6,29.5,35.8,26.1,4
+627,45-64,Graduate,<30k,Independent,2,76.9,0,7.2,3
+628,18-29,Some College,<30k,Republican,4,80.5,0,21.3,5
+629,45-64,Some College,>100k,Republican,2,0,14.9,36.3,9
+630,30-44,HS,<30k,Republican,5,34.8,45.1,32.9,8
+631,45-64,Some College,60-100k,Republican,3,72.1,21.8,100,2
+632,65+,HS,30-60k,Republican,4,59.6,40.7,56,3
+633,30-44,Some College,>100k,Independent,2,0,15.9,32.9,7
+634,65+,Some College,60-100k,Republican,1,35.3,36.2,47.5,6
+635,45-64,Some College,>100k,Democrat,4,18.3,8.8,17.9,1
+636,65+,College,60-100k,Independent,1,0,24.7,36,1
+637,45-64,Some College,60-100k,Independent,1,32.7,23.2,19.8,4
+638,45-64,HS,>100k,Democrat,4,5.8,36.9,55.8,3
+639,65+,HS,>100k,Republican,3,47.9,57.7,6.3,10
+640,45-64,Some College,60-100k,Democrat,4,46.9,28.7,22.1,8
+641,30-44,HS,60-100k,Republican,5,47.3,0,57.9,5
+642,18-29,HS,60-100k,Democrat,5,80.2,19.5,0,4
+643,45-64,Graduate,>100k,Independent,4,77.3,27,63.6,2
+644,18-29,Graduate,30-60k,Democrat,2,87.4,26.1,21,1
+645,18-29,HS,>100k,Democrat,3,45.8,40.3,55.3,8
+646,30-44,Graduate,30-60k,Independent,7,40.8,62.1,78.9,2
+647,65+,College,30-60k,Democrat,7,14.9,33.4,53.6,3
+648,45-64,College,30-60k,Independent,2,21.5,1.9,0,9
+649,30-44,Some College,60-100k,Republican,6,77.2,11,34.9,7
+650,18-29,College,60-100k,Independent,2,21.5,47.1,69.5,8
+651,30-44,HS,60-100k,Republican,2,34.3,5.1,42.5,4
+652,45-64,Graduate,<30k,Democrat,5,37.1,47.5,0,4
+653,45-64,HS,<30k,Republican,4,50.1,16.8,48.9,5
+654,65+,Graduate,30-60k,Republican,3,45,59.7,23.9,5
+655,30-44,Graduate,>100k,Democrat,5,25.6,27.1,50.7,9
+656,45-64,Some College,60-100k,Democrat,5,80.1,0,70.7,10
+657,30-44,Some College,60-100k,Republican,7,39.7,19.5,17.6,7
+658,30-44,Graduate,60-100k,Democrat,7,20.5,26.1,30.2,10
+659,30-44,Some College,<30k,Democrat,2,41.3,11,31.1,6
+660,65+,HS,30-60k,Independent,6,41.9,25.1,11,10
+661,45-64,Some College,60-100k,Independent,7,55.7,27.8,10.1,8
+662,45-64,College,60-100k,Democrat,5,60.2,27.3,49.4,6
+663,45-64,Some College,<30k,Republican,7,65.4,21,59.1,5
+664,65+,HS,30-60k,Independent,4,24,3.9,54.4,6
+665,30-44,HS,60-100k,Republican,6,36.4,43.2,56.1,8
+666,45-64,Graduate,<30k,Democrat,4,26.5,10.3,35.5,1
+667,30-44,Graduate,30-60k,Democrat,2,52.2,62.4,54.2,7
+668,30-44,College,>100k,Independent,6,63.1,26,51.5,1
+669,65+,Graduate,>100k,Independent,4,48.5,15.3,0,5
+670,45-64,College,60-100k,Independent,3,55,47.6,43.8,8
+671,45-64,Graduate,30-60k,Democrat,1,36.7,40.3,7.7,1
+672,65+,HS,>100k,Republican,6,32.7,33.3,37.8,5
+673,30-44,Graduate,60-100k,Democrat,7,50.3,4,22.7,7
+674,18-29,College,60-100k,Democrat,4,16.9,2.9,34.4,8
+675,30-44,Graduate,30-60k,Republican,2,26.8,25.9,23.1,3
+676,65+,Some College,<30k,Republican,2,3.9,9.3,54.9,5
+677,30-44,HS,30-60k,Democrat,3,70.5,14.1,63.2,1
+678,65+,College,60-100k,Independent,5,92.6,32.2,4.8,9
+679,45-64,Some College,>100k,Republican,1,34.7,14.5,32.9,5
+680,30-44,Some College,>100k,Republican,5,65.9,38.2,61,2
+681,45-64,Graduate,30-60k,Democrat,1,52,45.5,4.5,9
+682,45-64,HS,30-60k,Democrat,4,51.5,19.7,45,3
+683,65+,Graduate,<30k,Democrat,6,25.3,21,40.2,4
+684,30-44,HS,>100k,Independent,1,60.8,0,44.3,5
+685,65+,Some College,60-100k,Democrat,2,47.4,33.7,44.8,4
+686,30-44,HS,60-100k,Independent,7,94.1,53.6,31.2,2
+687,18-29,Graduate,60-100k,Democrat,1,92,32,46.1,4
+688,45-64,Some College,<30k,Independent,4,47.5,38.3,52,6
+689,18-29,Some College,<30k,Republican,6,79.3,14.1,57.6,1
+690,65+,Some College,60-100k,Democrat,7,0,0,44.9,9
+691,18-29,College,30-60k,Republican,3,19.1,14.8,0,4
+692,30-44,HS,30-60k,Democrat,2,18.7,7.7,38.2,6
+693,45-64,Some College,30-60k,Democrat,7,6.5,34.8,44.9,4
+694,65+,College,>100k,Independent,7,37.7,15,50.9,4
+695,30-44,Graduate,30-60k,Democrat,3,48.9,25.6,45.5,6
+696,65+,College,60-100k,Independent,2,23.7,35.2,55,3
+697,30-44,Graduate,60-100k,Independent,7,43.7,46.8,51.2,10
+698,30-44,Some College,<30k,Independent,2,20.4,20.3,63.3,9
+699,30-44,HS,<30k,Independent,3,0,27.9,42.3,8
+700,65+,Graduate,<30k,Democrat,4,31,16.1,44.9,1
+701,65+,Graduate,<30k,Democrat,2,35.7,40.8,12.9,9
+702,18-29,Some College,60-100k,Republican,4,96.9,40.4,43.9,10
+703,45-64,Some College,30-60k,Independent,1,54.6,23.3,38.4,5
+704,65+,College,<30k,Independent,7,0,16.2,8.1,3
+705,65+,College,60-100k,Republican,4,64.2,31.8,21.7,7
+706,65+,College,60-100k,Independent,6,0,20.6,32.2,6
+707,45-64,Graduate,<30k,Republican,6,68.1,0,43.3,2
+708,45-64,Some College,<30k,Democrat,5,12.8,0,15.3,5
+709,18-29,Graduate,60-100k,Republican,7,99.1,0,37.6,2
+710,30-44,College,60-100k,Republican,4,29.5,37.1,7.6,3
+711,65+,Some College,>100k,Republican,1,42.1,40.7,16.3,4
+712,18-29,Graduate,>100k,Democrat,3,72.1,26.6,26.6,4
+713,30-44,Some College,>100k,Independent,5,25.9,1.2,46.5,4
+714,45-64,HS,>100k,Independent,4,54,20.7,54.2,2
+715,45-64,College,30-60k,Democrat,3,86.8,20.7,35.4,1
+716,18-29,Graduate,<30k,Republican,4,14.7,37.7,0,7
+717,45-64,HS,>100k,Democrat,3,91.1,24.2,0,6
+718,30-44,Graduate,60-100k,Independent,7,38.5,0,41.9,2
+719,45-64,Some College,<30k,Independent,4,32.5,17.2,14.3,5
+720,30-44,College,30-60k,Democrat,2,41.2,54.7,58.2,8
+721,45-64,College,60-100k,Democrat,6,96.9,0,24,6
+722,65+,College,<30k,Democrat,4,49.6,51.5,55.9,10
+723,65+,Graduate,30-60k,Democrat,2,78.4,18.1,19.5,9
+724,65+,Some College,30-60k,Republican,2,43.8,3.8,24.5,9
+725,30-44,College,>100k,Democrat,4,83,28.6,54,5
+726,45-64,HS,<30k,Republican,5,18,23.4,50.2,3
+727,45-64,College,<30k,Independent,2,41.6,39.4,51.2,8
+728,45-64,HS,<30k,Republican,3,100,29.5,0,9
+729,65+,Graduate,30-60k,Republican,2,30.2,0,46.9,10
+730,18-29,HS,<30k,Republican,7,26.3,14,27.2,7
+731,65+,Graduate,<30k,Democrat,6,53.2,29.6,25.1,7
+732,30-44,College,<30k,Republican,4,3.6,17.7,22.9,10
+733,18-29,College,30-60k,Independent,4,50.1,17.4,28.8,6
+734,65+,Graduate,60-100k,Democrat,5,45.8,7.7,40.1,6
+735,45-64,Graduate,<30k,Republican,2,22.1,16.6,32.6,2
+736,30-44,Some College,>100k,Republican,2,33.6,28.3,37.4,6
+737,45-64,HS,<30k,Republican,7,62.9,34.8,30.5,10
+738,65+,HS,60-100k,Independent,3,26.7,31.2,53.4,10
+739,65+,College,>100k,Independent,2,44.3,26.9,35.3,3
+740,18-29,Some College,60-100k,Independent,5,93.7,7.1,41.3,4
+741,18-29,HS,60-100k,Republican,7,26.4,21.9,0,9
+742,30-44,Some College,60-100k,Republican,7,71.5,19.4,49.1,5
+743,30-44,Some College,>100k,Democrat,6,35.9,10.2,0,8
+744,65+,Some College,60-100k,Republican,3,92.6,0,70.1,3
+745,18-29,HS,30-60k,Democrat,6,34.1,20.9,21.7,5
+746,65+,Some College,>100k,Republican,6,100,23.2,37.7,2
+747,45-64,College,60-100k,Republican,4,47.8,0,38.4,6
+748,18-29,HS,30-60k,Democrat,3,19,0,82.6,1
+749,30-44,Some College,30-60k,Democrat,6,31.6,30.7,32.4,6
+750,30-44,College,<30k,Republican,6,11,51.9,35.7,4
+751,30-44,HS,<30k,Democrat,3,56.6,28.7,11.8,5
+752,65+,HS,30-60k,Democrat,6,68.3,15.3,61,8
+753,30-44,College,30-60k,Democrat,4,26.3,40,35.8,1
+754,30-44,College,>100k,Republican,4,14.8,23,99.4,9
+755,45-64,College,<30k,Republican,6,56.4,13.6,47.9,10
+756,65+,HS,>100k,Independent,6,62.8,6.4,32.4,2
+757,30-44,Some College,60-100k,Independent,1,0,43.3,46.9,1
+758,18-29,College,30-60k,Independent,4,64.9,25.8,0,1
+759,30-44,Graduate,>100k,Independent,6,78.1,0,38,4
+760,18-29,Some College,<30k,Democrat,6,67.4,2.9,66.1,6
+761,30-44,College,60-100k,Republican,2,0,42.6,33.2,5
+762,18-29,Some College,60-100k,Democrat,3,32.7,1.4,66.9,2
+763,45-64,College,<30k,Democrat,4,35.1,57.1,59,8
+764,45-64,Graduate,30-60k,Republican,6,75.2,45.6,0,1
+765,45-64,HS,60-100k,Democrat,3,20,14,0.8,10
+766,45-64,Graduate,60-100k,Independent,3,74.3,46.2,60.3,10
+767,30-44,Graduate,>100k,Democrat,6,29.5,26.3,62.8,9
+768,45-64,Graduate,>100k,Independent,3,1.6,0,26.3,8
+769,30-44,Some College,60-100k,Republican,4,100,17.6,50.7,7
+770,30-44,Some College,60-100k,Republican,1,32.2,10.2,31,8
+771,65+,HS,30-60k,Independent,1,71.8,44.1,4,7
+772,65+,Some College,60-100k,Republican,2,19.2,0,19.7,4
+773,18-29,Graduate,30-60k,Independent,4,62.4,10,30.7,1
+774,65+,College,<30k,Independent,3,59.5,32,43.1,7
+775,18-29,Graduate,60-100k,Republican,5,0,5.5,24.4,4
+776,30-44,Graduate,60-100k,Democrat,1,59.3,31.3,36.8,7
+777,30-44,HS,>100k,Democrat,3,20.6,24.7,12.2,3
+778,30-44,Some College,60-100k,Democrat,6,100,4.6,41.4,1
+779,18-29,Some College,30-60k,Democrat,4,28.9,45.3,34.5,9
+780,45-64,HS,30-60k,Independent,7,78.7,0,37.3,7
+781,18-29,Graduate,60-100k,Democrat,2,48.6,12.8,31.1,1
+782,30-44,Graduate,>100k,Democrat,5,93.2,38.2,25.3,6
+783,30-44,Some College,>100k,Independent,2,65,19.7,23,9
+784,18-29,Graduate,60-100k,Independent,5,67.2,28.5,31,6
+785,18-29,HS,30-60k,Democrat,5,60.2,35.9,16.9,10
+786,65+,College,>100k,Independent,1,50.9,0,29.5,7
+787,65+,Graduate,>100k,Independent,5,45.6,13,49.9,4
+788,30-44,HS,>100k,Independent,5,71,0,2.2,9
+789,65+,College,60-100k,Democrat,1,30.7,27.3,41.8,5
+790,30-44,Graduate,<30k,Democrat,7,26.5,18.3,0,2
+791,65+,HS,30-60k,Democrat,1,36.4,30.7,20.1,8
+792,30-44,HS,<30k,Independent,4,65.5,11.3,9.9,3
+793,45-64,Graduate,<30k,Independent,2,82.5,0,23.8,8
+794,45-64,HS,>100k,Democrat,4,37.1,42,26.9,9
+795,45-64,Some College,30-60k,Republican,6,52.3,47.7,66.7,2
+796,45-64,HS,>100k,Independent,3,25.6,13.8,15.8,4
+797,30-44,Some College,<30k,Republican,6,2.2,10.5,51.2,10
+798,65+,College,60-100k,Independent,7,26.1,25.4,42.4,5
+799,65+,HS,30-60k,Democrat,5,29.9,0.4,32.7,8
+800,45-64,College,60-100k,Republican,7,45.6,27.3,60.6,9
+801,45-64,Graduate,>100k,Democrat,1,51.2,28.6,18.2,2
+802,18-29,College,60-100k,Independent,2,59.5,26.7,34.5,3
+803,65+,Some College,>100k,Republican,1,27.1,0,30.7,5
+804,18-29,Graduate,>100k,Democrat,1,30,12.1,93.1,9
+805,45-64,Graduate,30-60k,Independent,4,20.6,10.8,61.6,4
+806,18-29,HS,30-60k,Republican,4,22.8,72.7,61.2,4
+807,45-64,Some College,<30k,Independent,2,62.5,0,30.8,4
+808,30-44,Graduate,>100k,Republican,2,68.1,12.1,40.8,1
+809,65+,HS,60-100k,Democrat,6,31.1,22.8,27.4,4
+810,18-29,Graduate,>100k,Independent,1,52.8,6.7,43.4,2
+811,65+,Some College,>100k,Democrat,1,50.6,19.4,51.6,2
+812,18-29,Some College,>100k,Democrat,6,0,46.2,54.2,5
+813,30-44,College,60-100k,Independent,1,39.3,21.8,0,9
+814,45-64,HS,>100k,Democrat,3,16,34.5,18.9,4
+815,30-44,Some College,>100k,Independent,2,38.6,46.2,0,6
+816,45-64,HS,60-100k,Democrat,5,81.8,5.7,56.2,4
+817,18-29,College,<30k,Democrat,5,69.4,55.2,67.5,7
+818,30-44,College,<30k,Democrat,3,57.9,25.3,16.7,9
+819,30-44,Some College,60-100k,Democrat,3,28.1,22.6,26.6,1
+820,30-44,Graduate,>100k,Democrat,2,1.5,40.9,40.3,3
+821,18-29,College,>100k,Democrat,1,39,0.3,73.2,1
+822,65+,HS,30-60k,Republican,4,17.1,0,31,7
+823,65+,HS,60-100k,Independent,1,52.3,46.3,18.1,10
+824,65+,HS,<30k,Independent,5,85.3,7.2,46.5,1
+825,45-64,Some College,30-60k,Independent,4,36.7,24.9,35.4,1
+826,65+,Graduate,>100k,Independent,3,69.8,12.9,50.6,9
+827,18-29,Graduate,<30k,Republican,4,94.5,49.1,23.9,7
+828,45-64,HS,30-60k,Democrat,3,100,11.7,37.9,8
+829,45-64,College,<30k,Democrat,1,90,22.4,8.3,3
+830,18-29,Some College,<30k,Democrat,6,37.9,27.5,50.5,3
+831,65+,College,<30k,Republican,6,40.4,45.1,26.3,8
+832,65+,Graduate,30-60k,Independent,5,71.2,44.8,20.9,5
+833,45-64,Graduate,60-100k,Republican,5,33.8,24.1,71.6,5
+834,30-44,HS,<30k,Democrat,4,20.5,51.6,13,6
+835,18-29,HS,<30k,Independent,5,91.2,7.7,6.3,10
+836,18-29,Some College,30-60k,Democrat,6,58.6,0.3,37.1,6
+837,45-64,HS,30-60k,Republican,1,0,40.5,32.8,6
+838,65+,Some College,30-60k,Republican,3,37.9,0.2,52.4,7
+839,30-44,College,60-100k,Independent,3,16.9,31.8,31.8,10
+840,18-29,Some College,<30k,Democrat,2,0,14.6,38.6,8
+841,45-64,College,30-60k,Democrat,1,27.3,0,40,10
+842,45-64,Some College,<30k,Independent,4,42.4,39.1,26.4,4
+843,18-29,HS,>100k,Democrat,1,54,50.9,31.1,1
+844,30-44,Some College,30-60k,Republican,7,0,44.2,13.8,3
+845,65+,Graduate,>100k,Democrat,3,54.7,6.4,42.3,5
+846,30-44,Graduate,30-60k,Independent,2,39.2,29.8,46.6,7
+847,18-29,HS,60-100k,Independent,3,0,32.3,28.4,5
+848,18-29,College,>100k,Republican,7,81.9,30.8,28.7,6
+849,18-29,HS,>100k,Republican,2,48.2,39.7,47.9,5
+850,65+,College,>100k,Democrat,4,74.5,44,41.5,7
+851,65+,Graduate,60-100k,Democrat,7,18.9,41.7,50.9,6
+852,65+,Some College,60-100k,Independent,6,38.6,31.4,52.9,10
+853,65+,Graduate,60-100k,Republican,4,46,0,0,3
+854,45-64,Some College,60-100k,Independent,7,52.1,18.9,34.9,10
+855,18-29,Graduate,30-60k,Democrat,2,59,27.9,5,1
+856,65+,Graduate,<30k,Republican,2,21.3,2.9,55.9,3
+857,18-29,Some College,<30k,Democrat,4,28.6,39.5,64.4,6
+858,18-29,Graduate,60-100k,Independent,3,50.3,26.1,15.9,2
+859,45-64,College,<30k,Independent,1,38.4,21.6,37.3,3
+860,65+,Graduate,>100k,Democrat,2,11.9,54.6,6,1
+861,30-44,College,30-60k,Democrat,6,46.2,23.3,65.6,4
+862,65+,Graduate,<30k,Independent,3,36.6,33.8,28.9,4
+863,18-29,College,30-60k,Republican,4,60.9,14.9,64.4,8
+864,18-29,Some College,30-60k,Republican,2,58.6,24.9,56,3
+865,65+,HS,<30k,Independent,3,53.6,8.9,6.4,3
+866,65+,Graduate,>100k,Republican,2,49.4,26.1,62.6,10
+867,45-64,HS,>100k,Independent,6,23.4,11.9,33.9,1
+868,18-29,HS,60-100k,Democrat,6,45.8,30.1,34.3,6
+869,18-29,College,30-60k,Republican,1,33.3,13.8,21.8,2
+870,45-64,Some College,<30k,Republican,1,12.7,37.4,17.3,10
+871,45-64,College,30-60k,Republican,3,23,14.7,62.3,7
+872,65+,Graduate,<30k,Republican,2,35.3,23.8,38.3,5
+873,18-29,Some College,<30k,Independent,3,47,0,49.4,2
+874,65+,HS,30-60k,Republican,7,54.1,45.7,23.6,2
+875,45-64,College,<30k,Independent,2,24.3,39.9,51.1,9
+876,45-64,HS,<30k,Independent,1,28.5,36.9,32.5,4
+877,65+,College,<30k,Independent,6,63.3,53.9,14,2
+878,18-29,College,<30k,Independent,5,50.4,12.1,44.5,4
+879,45-64,Graduate,30-60k,Independent,2,50,24.8,30,3
+880,30-44,HS,<30k,Democrat,1,31,32.9,54.6,6
+881,30-44,HS,>100k,Independent,3,30.9,25.4,0,8
+882,30-44,Some College,>100k,Republican,6,80.9,22.6,50.6,3
+883,30-44,HS,<30k,Republican,2,61.6,13.5,22.6,4
+884,30-44,Graduate,>100k,Independent,3,42.1,21.8,65.9,4
+885,45-64,Graduate,30-60k,Republican,3,73.7,16.1,23.9,8
+886,45-64,HS,>100k,Independent,3,57.5,35.6,36.3,5
+887,45-64,HS,30-60k,Independent,3,27.3,47.2,71.2,5
+888,30-44,Some College,30-60k,Independent,5,83.8,35.3,27.3,8
+889,45-64,HS,60-100k,Republican,3,27.7,8,16.9,3
+890,30-44,Some College,60-100k,Independent,6,24.8,42.1,26.1,2
+891,45-64,Graduate,>100k,Republican,1,66.7,9.1,30,10
+892,18-29,College,60-100k,Democrat,5,67,51.8,34.8,10
+893,65+,HS,>100k,Republican,1,82.2,0,11.5,1
+894,65+,Graduate,>100k,Independent,6,69.1,29.8,35.7,9
+895,18-29,Some College,<30k,Democrat,2,76.2,51.7,29.7,7
+896,30-44,Some College,>100k,Democrat,7,16.8,45.3,32.9,4
+897,18-29,College,30-60k,Republican,1,31.6,17.9,15.5,6
+898,45-64,Some College,<30k,Independent,7,8.3,32.3,44.7,9
+899,45-64,College,30-60k,Democrat,6,37.1,7.2,40.9,9
+900,30-44,Graduate,<30k,Republican,3,53.6,38.5,100,2
+901,65+,HS,>100k,Democrat,3,81.5,43.6,40.3,2
+902,18-29,HS,>100k,Democrat,2,33.9,0,25.1,2
+903,45-64,Graduate,30-60k,Democrat,1,38.6,28.4,48.4,4
+904,18-29,Graduate,>100k,Republican,3,40.6,66.8,4.5,3
+905,45-64,Graduate,>100k,Republican,5,66,0,32.1,9
+906,30-44,College,30-60k,Republican,5,50.5,0,20.8,8
+907,65+,Graduate,>100k,Independent,2,72.5,18.2,30.9,10
+908,30-44,College,30-60k,Republican,6,45.9,25.2,42.3,4
+909,18-29,Graduate,>100k,Republican,6,19.1,26.1,37.7,4
+910,18-29,College,<30k,Republican,7,48,16.5,59.2,7
+911,45-64,College,30-60k,Democrat,7,19.2,24.3,13.7,10
+912,65+,HS,>100k,Republican,2,91.1,0,28.6,10
+913,18-29,College,>100k,Republican,3,74.1,29.6,33.6,5
+914,45-64,HS,<30k,Republican,2,31.3,61.4,18.4,4
+915,45-64,Graduate,30-60k,Independent,1,68.9,15,31.6,6
+916,45-64,Some College,>100k,Democrat,7,34.3,21.1,47.8,5
+917,18-29,Graduate,>100k,Independent,4,20.7,55.4,40.4,4
+918,45-64,College,30-60k,Independent,5,42.1,39.3,26.9,3
+919,18-29,Graduate,60-100k,Democrat,7,68,44.9,0,7
+920,65+,Graduate,60-100k,Independent,3,57.5,26.2,27,3
+921,45-64,Graduate,60-100k,Independent,4,45.8,22.3,0,8
+922,65+,HS,60-100k,Democrat,5,82.8,31.4,39.3,10
+923,18-29,Some College,30-60k,Democrat,3,20.7,8.6,34.6,8
+924,65+,College,>100k,Republican,2,28.7,2.8,29.9,2
+925,45-64,HS,60-100k,Independent,1,50.4,0,25.7,5
+926,45-64,Some College,60-100k,Republican,6,83.5,26.9,47.5,5
+927,65+,Graduate,>100k,Independent,7,54.2,0.7,0,4
+928,45-64,College,30-60k,Democrat,1,6.8,19.9,27.2,7
+929,45-64,College,<30k,Republican,6,54.7,24.6,0,1
+930,65+,Graduate,>100k,Democrat,2,80.4,9.9,19.5,6
+931,30-44,HS,<30k,Independent,7,3.2,28.7,0,6
+932,65+,Some College,>100k,Democrat,3,30.4,31.2,5.2,6
+933,45-64,College,60-100k,Independent,2,19.2,33.7,36.6,2
+934,65+,HS,60-100k,Democrat,4,71.9,32.7,33.6,10
+935,30-44,HS,30-60k,Democrat,5,19.6,48.4,2.4,7
+936,45-64,Some College,60-100k,Republican,4,4.7,19.9,16.5,1
+937,18-29,HS,>100k,Democrat,3,60.8,12.4,38.2,10
+938,45-64,Graduate,30-60k,Independent,1,53.7,22.9,68.5,8
+939,45-64,HS,60-100k,Independent,5,35.1,39.7,24.9,7
+940,30-44,Some College,30-60k,Independent,4,59.9,50.7,60.2,4
+941,45-64,HS,>100k,Independent,4,55.8,21.2,42,8
+942,30-44,HS,>100k,Independent,6,30.4,7.4,0.1,9
+943,30-44,Some College,<30k,Democrat,4,60.3,24.5,49.3,8
+944,18-29,Some College,>100k,Republican,6,21.1,6.5,60.2,8
+945,30-44,Graduate,<30k,Republican,1,43.8,29.2,13.5,1
+946,45-64,Graduate,<30k,Democrat,3,15.9,0,32.8,5
+947,45-64,Some College,>100k,Democrat,6,20.2,45.2,40.1,8
+948,65+,College,>100k,Democrat,2,26.1,25.2,16.2,9
+949,30-44,HS,>100k,Democrat,5,29.4,37,23.9,5
+950,18-29,HS,30-60k,Democrat,2,43.1,0,72,5
+951,45-64,Some College,30-60k,Independent,3,29.9,7.4,74.9,1
+952,30-44,Some College,>100k,Independent,2,58.2,20.1,11,9
+953,65+,HS,<30k,Republican,4,18.2,20.8,36.1,8
+954,45-64,Graduate,60-100k,Republican,6,77.3,7.7,30.9,4
+955,65+,Some College,>100k,Republican,3,76.1,35.2,54.1,6
+956,30-44,HS,60-100k,Independent,4,94.1,0,52.2,4
+957,18-29,HS,>100k,Democrat,1,41.8,52,48.4,5
+958,18-29,Graduate,<30k,Democrat,3,22.6,48,38.1,3
+959,18-29,College,60-100k,Republican,2,75.7,29.5,7.9,7
+960,30-44,HS,>100k,Republican,3,27.6,0,47.5,9
+961,65+,College,60-100k,Independent,4,34.8,24.9,36,10
+962,65+,Graduate,<30k,Independent,6,55.1,42.6,38.2,1
+963,30-44,Some College,30-60k,Independent,2,45.8,30.9,60.6,6
+964,45-64,College,>100k,Republican,3,52.9,31.6,18.9,4
+965,45-64,Graduate,60-100k,Independent,4,36.3,23.2,0,2
+966,45-64,College,<30k,Republican,7,28,59.5,37.1,9
+967,18-29,College,30-60k,Democrat,4,44.6,14.4,85.4,5
+968,18-29,College,<30k,Independent,4,20.8,0,34.7,10
+969,45-64,Some College,30-60k,Democrat,4,93.1,35.5,42.4,1
+970,65+,HS,>100k,Republican,4,56.7,1.3,48.5,10
+971,65+,Graduate,60-100k,Independent,7,62.8,50.9,27.2,6
+972,30-44,HS,<30k,Republican,3,45.5,39.3,7.9,4
+973,65+,Some College,<30k,Independent,3,76.8,11.2,21.4,8
+974,30-44,Some College,60-100k,Republican,2,4.2,45.3,67.4,2
+975,30-44,Graduate,60-100k,Independent,5,32.4,14.5,27.3,5
+976,65+,Graduate,<30k,Independent,1,76.5,27.5,56.5,8
+977,45-64,College,60-100k,Independent,5,51,39,63.5,7
+978,65+,Some College,30-60k,Independent,1,46.6,13.5,36.3,2
+979,65+,HS,<30k,Independent,5,8.4,14.3,72.7,10
+980,65+,HS,30-60k,Republican,6,69.2,13,39,8
+981,30-44,Some College,60-100k,Democrat,4,64.9,9.1,25.1,8
+982,30-44,HS,<30k,Democrat,5,39.9,0,78,2
+983,65+,Graduate,60-100k,Independent,5,23.6,54.9,26.3,10
+984,45-64,College,>100k,Independent,4,31.3,45.6,26.1,4
+985,45-64,Graduate,60-100k,Republican,2,81,28.7,43.2,4
+986,65+,Graduate,<30k,Democrat,6,0,29.5,40,4
+987,65+,Some College,30-60k,Republican,5,66.5,40.7,44.6,1
+988,45-64,HS,<30k,Republican,5,43.4,51.7,23.8,1
+989,30-44,Graduate,<30k,Democrat,7,61.5,36.4,44.1,7
+990,30-44,Graduate,>100k,Independent,3,1.9,15.9,35.1,3
+991,65+,College,30-60k,Democrat,4,48,64.1,70.8,2
+992,18-29,Graduate,>100k,Republican,7,69.1,4.7,0,4
+993,30-44,HS,<30k,Independent,1,20.8,78.2,46.6,2
+994,65+,Some College,<30k,Republican,2,32.7,12.9,34,4
+995,45-64,HS,60-100k,Independent,5,55.7,19.5,39.9,3
+996,18-29,HS,<30k,Democrat,5,26.7,8,44.6,7
+997,30-44,Graduate,60-100k,Democrat,1,73.7,12.7,12.7,10
+998,45-64,Some College,60-100k,Independent,3,50.9,59.4,31.1,7
+999,30-44,HS,<30k,Republican,6,19.6,24.9,68.1,10
+1000,45-64,Some College,<30k,Democrat,7,12.5,44,30.1,1
